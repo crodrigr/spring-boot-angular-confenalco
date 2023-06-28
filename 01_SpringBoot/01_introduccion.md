@@ -56,3 +56,10 @@ Durante el desarrollo de este curso se va construir un proyecto. Una aplicación
 ### 3.5 Diagrama de paquetes
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/2244a073-9f9f-4cbb-875b-9cd3cc265e67)
+
+## 4. Instalación
+
+### 4.1 Java
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/f8ceb2f2-3cf3-44bf-8916-284d78ac9cbd)
+
