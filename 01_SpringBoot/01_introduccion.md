@@ -61,5 +61,24 @@ Durante el desarrollo de este curso se va construir un proyecto. Una aplicación
 
 ### 4.1 Java
 
+#### 4.1.1 Descargar java 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/95c3716f-95f6-405a-955e-2f2bcdb14740)
+
+
+#### 4.1.2 JAVA_HOME
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/a724614b-a23d-454e-a23e-1567b5e5acc2)
+
+
+#### 4.1.3 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/f8ceb2f2-3cf3-44bf-8916-284d78ac9cbd)
+
+### 4.2 Visual studio code
+
+#### 4.2.1 Extensiones java
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/a9506c4c-07ad-4854-862f-aaacb9fb4461)
+
+#### 4.2.2 Extensiones spring-boot
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/4b9e17c3-4438-45d3-85eb-84c231004a82)
 
