@@ -29,4 +29,14 @@ Esta tecnología se puede trabajar en diferentes sistemas operativos: linux o wi
 - Git
 
 En este curso la instalación se va realizar en windows
+
+## 3. Proyecto
+
+Durante el desarrollo de este curso se va construir un proyecto. Una aplicación web para realizar la facturación de un compañia. 
+
+### 3.1 Diagrama  contexto
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/d7a36071-cd6a-4567-acbf-bdc0486cb025)
+
+
   
