@@ -27,6 +27,7 @@ Esta tecnología se puede trabajar en diferentes sistemas operativos: linux o wi
 - Java jdk 11 o superior
 - Visual studio code (extensiones para trabajar java y spring boot)
 - Git
+- Postman
 
 En este curso la instalación se va realizar en windows
 
