@@ -19,3 +19,14 @@ Spring Boot se enfoca en la convención sobre la configuración, lo que signific
 5.  **Administración de dependencias:** Spring Boot maneja automáticamente las dependencias y las versiones de las bibliotecas que utilizas en tu proyecto, lo que simplifica la administración y evita conflictos de dependencias.
 
 En resumen, Spring Boot es un marco de desarrollo que simplifica la creación de aplicaciones Java autónomas al proporcionar una configuración automática y características listas para usar. Permite a los desarrolladores concentrarse en la lógica de negocio sin tener que preocuparse por la configuración y la infraestructura.
+
+## 2. Herramientas
+
+Esta tecnología se puede trabajar en diferentes sistemas operativos: linux o windows. 
+
+- Java jdk 11 o superior
+- Visual studio code (extensiones para trabajar java y spring boot)
+- Git
+
+En este curso la instalación se va realizar en windows
+  
