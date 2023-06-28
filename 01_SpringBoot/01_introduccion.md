@@ -34,9 +34,21 @@ En este curso la instalación se va realizar en windows
 
 Durante el desarrollo de este curso se va construir un proyecto. Una aplicación web para realizar la facturación de un compañia. 
 
-### 3.1 Diagrama  contexto
+### 3.1 Diagrama de  contexto
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/d7a36071-cd6a-4567-acbf-bdc0486cb025)
 
 
-  
+### 3.2 Diagrama de contenedores
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/0b5b1d07-e529-45c0-8047-b8ed1cf1e0d2)
+
+### 3.3 Diagrama de componentes
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/460b2571-1383-4ff4-b9cd-101a2f7fc1a1)
+
+
+### 3.4 Diagrama de clases
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/4bcbc67c-73f7-466b-84e1-99a5a4e16e39)
+
