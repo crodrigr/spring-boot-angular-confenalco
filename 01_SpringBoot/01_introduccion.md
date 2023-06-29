@@ -84,15 +84,15 @@ Durante el desarrollo de este curso se va construir un proyecto. Una aplicación
 
 ## 5 Crear proyecto spring
 
-#### 5.1 
+#### 5.1 Spring Initializr datos proyecto
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/6ddcad9a-63c1-42ff-9344-631bf4fd25eb)
 
-#### 5.2 
+#### 5.2 Spring Initializr version java
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/d72df756-a80a-4176-995c-21e46d2e2e86)
 
-#### 5.3
+#### 5.3 Spring Initializr dependencias
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/4ec25ee6-6b42-4beb-a24b-54c66668ca3a)
 
