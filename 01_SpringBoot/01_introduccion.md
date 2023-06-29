@@ -104,4 +104,7 @@ Durante el desarrollo de este curso se va construir un proyecto. Una aplicación
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/bcb7c286-30ca-4866-9d3d-e469346bf6ee)
 
+#### 5.5 Test en postman
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/05af3fa7-9f0c-4bd2-a391-ea5663103322)
 
