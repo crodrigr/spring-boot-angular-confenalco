@@ -82,3 +82,26 @@ Durante el desarrollo de este curso se va construir un proyecto. Una aplicación
 #### 4.2.2 Extensiones spring-boot
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/4b9e17c3-4438-45d3-85eb-84c231004a82)
 
+## 5 Crear proyecto spring
+
+#### 5.1 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/6ddcad9a-63c1-42ff-9344-631bf4fd25eb)
+
+#### 5.2 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/d72df756-a80a-4176-995c-21e46d2e2e86)
+
+#### 5.3
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/4ec25ee6-6b42-4beb-a24b-54c66668ca3a)
+
+#### 5.4 Crear IndexController.java
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/0ba73406-26db-43c8-a97b-f46b1ba0cfee)
+
+**Start proyect**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/bcb7c286-30ca-4866-9d3d-e469346bf6ee)
+
+
