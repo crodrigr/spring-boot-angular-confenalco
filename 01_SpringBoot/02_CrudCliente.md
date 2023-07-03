@@ -48,8 +48,9 @@ En esta clase Cliente se define los siguientes atributos. Son private por que se
 
 - private Long id
 - private String nombre
-- private String codigo
-- private String descripcion
+- private String apellido
+- private String email
+- private Date createAt
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/4dcdeab8-f08a-40be-ae51-e8b546eb73e7)
 
@@ -70,7 +71,7 @@ Dentro del paqute **repositories** se denfine las interfaces repositories, las c
 - findById
 - Delete
 
-Estos métodos van actuar sobre la clase entity que se defina, en este caso **Producto** y también se pasa cual es el tipo de dato de la llave primaria de dicha clase, en este caso **Long**. 
+Estos métodos van actuar sobre la clase entity que se defina, en este caso **Cliente** y también se pasa cual es el tipo de dato de la llave primaria de dicha clase, en este caso **Long**. 
 
 **Nota**: esta interfaz al heredar de CrudRepository que es un clase de tipo repository es un tipo de clase bean que el contenedor de spring boot se encarga de gestionar, por lo tanto, permite que se haga inyección de dependencia. 
 
