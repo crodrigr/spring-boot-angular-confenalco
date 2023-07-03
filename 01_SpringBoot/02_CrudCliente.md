@@ -78,7 +78,7 @@ Estos métodos van actuar sobre la clase entity que se defina, en este caso **Cl
 
 [Documentación spring jpa repository](https://www.baeldung.com/spring-data-read-only-repository)
 
-## 2.1 Interfaz RepositoryProducto
+## 2.1 Interfaz RepositoryCliente
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/dda9a5e5-b94f-4005-8066-37ccea35b6f7)
 
@@ -88,7 +88,7 @@ Estos métodos van actuar sobre la clase entity que se defina, en este caso **Cl
 En la capa de services, es donde se definie la logica del negocio. Son los servicios que van ha ser consumidos por los controladores. Se define una interfaz con los servicio, en este caso **ClienteService** y dentro del paquete **impl** se define la clase **ClienteServiceImpl**, dicha clase va la definición de los métodos de clarados en la interfaz **ClienteService**
 
 
-## 3.1 Interfaz ProductoService
+## 3.1 Interfaz ClienteService
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/8d6449a4-c066-4f13-93e2-58f42d45d2f6)
 
