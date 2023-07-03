@@ -130,3 +130,10 @@ A traves de la dependencia validation se puede validar campos de la clase entity
 ## 5.1 Dependencias
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/006954ed-aae4-46b0-8e8d-006d9e0ceda8)
 
+
+## 5.2 Validaciones
+
+En el nombre se usa la validación **NotEmpty** el cual valida que no nombre no sea vacio y que @size debe ser entre 3 y 30 caracteres. Por parate el email a traves de @email valida que se un cuenta correo bien formada. 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/2f8d500a-dd99-4673-923a-5ab1c5ab67ef)
+
