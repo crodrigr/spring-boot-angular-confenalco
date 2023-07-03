@@ -122,3 +122,11 @@ Al utilizar la anotación @RestController, no es necesario anotar cada método i
 ## 4.1 ClienteController
 
 ![image](https://github.com/crodrigr/microservicios-spring-boot-confenalco/assets/31961588/a77973e7-d902-4b7b-870a-0b30d2d3abb9)
+
+# 5. Validaciones de campos 
+
+A traves de la dependencia validation se puede validar campos de la clase entity antes de que se persista. 
+
+## 5.1 Dependencias
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/006954ed-aae4-46b0-8e8d-006d9e0ceda8)
+
