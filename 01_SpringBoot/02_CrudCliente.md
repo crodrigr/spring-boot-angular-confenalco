@@ -56,7 +56,8 @@ En esta clase Cliente se define los siguientes atributos. Son private por que se
 
 Continuación con los métodos getter and setter
 
-![image](https://github.com/crodrigr/microservicios-spring-boot-confenalco/assets/31961588/dc362e79-7d37-433f-b233-45b5b6dc5a4e)
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/6fe7dfee-8356-47c7-805b-6b6b904110b5)
+
 
 Las clases entity deben implementar la insterface Serailizable:
 
