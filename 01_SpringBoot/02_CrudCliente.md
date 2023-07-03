@@ -112,3 +112,7 @@ Se definie la clase de tipo controller.Es la que está expuesta a atender al lla
 La anotación **@RestController** en Spring Boot se utiliza para marcar una clase como un controlador (controller) de API REST. Esta anotación combina las anotaciones **@Controller** y **@ResponseBody**, lo que significa que la clase anotada con **@RestController** es capaz de manejar las solicitudes HTTP y devolver directamente objetos serializados como respuestas en formato JSON o XML.
 
 Al utilizar la anotación @RestController, no es necesario anotar cada método individualmente con @ResponseBody, ya que la anotación @RestController se encarga de eso automáticamente para todos los métodos del controlador.
+
+## 4.1 ClienteController
+
+![image](https://github.com/crodrigr/microservicios-spring-boot-confenalco/assets/31961588/a77973e7-d902-4b7b-870a-0b30d2d3abb9)
