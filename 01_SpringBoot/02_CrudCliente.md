@@ -137,3 +137,12 @@ En el nombre se usa la validación **NotEmpty** el cual valida que no nombre no 
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/2f8d500a-dd99-4673-923a-5ab1c5ab67ef)
 
+# 6. Otros servicios del crud
+
+## 6.1 Cliente por Id
+
+Este endpoint trae cliente por id
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/4b10b464-eea8-46fb-af03-37325c0d8f54)
+
+
