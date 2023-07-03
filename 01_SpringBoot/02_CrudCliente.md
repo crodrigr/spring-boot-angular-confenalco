@@ -145,4 +145,12 @@ Este endpoint trae cliente por id
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/4b10b464-eea8-46fb-af03-37325c0d8f54)
 
+## 6.1 Crear nuevo cliente
 
+Se envia por una petición post **public ResponseEntity<?> create(@Valid @RequestBody Cliente cliente, BindingResult result)** se envia el cliente y el valid aplica las validaciones de validation del punto 5. 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/aaeeb0b8-191e-48b2-a73c-feee07fc43c3)
+
+En postman se hace una prueba de crea un nuevo cliente, vemos que responde 201 create y el objeto que se creo con el id. 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/52633c4a-cd6a-4a1d-b36f-f3a9a351b5bc)
