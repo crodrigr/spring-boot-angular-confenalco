@@ -165,3 +165,6 @@ Se hace una prueba en postman, enviando por el path el id del cliente 8 y los da
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/cf55f333-9159-41e5-8700-4edf154365b5)
 
+## 6.4 Delete cliente
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/b5dcc114-6301-4c2e-aadc-83b6c4d4e16d)
