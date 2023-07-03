@@ -167,4 +167,13 @@ Se hace una prueba en postman, enviando por el path el id del cliente 8 y los da
 
 ## 6.4 Delete cliente
 
+Se crea un endpoint de tipo delete que recibe por pathvariable el id del cliente que se va eliminar
+
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/b5dcc114-6301-4c2e-aadc-83b6c4d4e16d)
+
+Se hace una prueba en postman de como se elimina el un cliente por Id
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/b40ae7a3-ee4e-492e-be8a-e37f49c6db35)
+
+
+
