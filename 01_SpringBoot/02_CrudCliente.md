@@ -94,7 +94,7 @@ En la capa de services, es donde se definie la logica del negocio. Son los servi
 
 ## 3.2 Clase ClienteServiceImpl
 
-Esta clase es una clase de tipo Servicio por eso tiene la anotación **@Service** dicha anotación hace que esta clase se especial y sea un bean el cual va permitir hacer inyección de dependencia. 
+Esta clase es una clase de tipo Servicio por eso tiene la anotación **@Service** dicha anotación hace que esta clase sea especial y sea un bean el cual va permitir hacer inyección de dependencia. 
 
 Por otra parte, hace la inyección de dependencia de **RepositoryCliente**, que proporciona los métodos que van interactuar con la base de datos. 
 
