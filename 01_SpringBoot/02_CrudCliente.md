@@ -154,3 +154,14 @@ Se envia por una petición post **public ResponseEntity<?> create(@Valid @Reques
 En postman se hace una prueba de crea un nuevo cliente, vemos que responde 201 create y el objeto que se creo con el id. 
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/52633c4a-cd6a-4a1d-b36f-f3a9a351b5bc)
+
+## 6.3 Modificar un cliente
+
+Se define un endpoint con una petición de put, la cual, recie por pathvariable el id del cliente que se va modificar y el objeto cliente con los cambios aplicar. 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9970525e-cfe2-4a56-9086-28284c08bcd5)
+
+Se hace una prueba en postman, enviando por el path el id del cliente 8 y los datos del cliente con los cambio por un bodyreques,la petición responde un 201 created con exito. 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/cf55f333-9159-41e5-8700-4edf154365b5)
+
