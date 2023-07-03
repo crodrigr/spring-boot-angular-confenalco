@@ -26,6 +26,12 @@ En el archivo **application.propreties** se debe configurar las credenciales de 
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/8bf16f69-1363-4a1c-98b1-f22ab7173bab)
 
+## import.sql
+
+Dentro del resource se crea una archivo **import.sql** con los insert que se quiere ejecutar cada vez que inice la aplicación. En cada inicio se borra la base de datos y se reconstruye con los cambios insertando estos datos. Lo anterior se debe a que se tiene configurado en el **applicacion.properties** el siguiente paramentro **spring.jpa.hibernate.ddl-auto=create-drop**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/1f50675d-7e87-4729-8828-6b49a281b078)
+
 
 
 # 1 Entities
