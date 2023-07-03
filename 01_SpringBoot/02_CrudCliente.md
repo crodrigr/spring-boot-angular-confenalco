@@ -30,7 +30,7 @@ En el archivo **application.propreties** se debe configurar las credenciales de 
 
 # 1 Entities
 
-## 1.1 Clase entity de producto
+## 1.1 Clase entity de cliente
 
 Esta clase tiene la anotación Entity, la cual, marca la clase de tipo entidad que se va ha mapear con base de datos. Estas son algunas anotaciones:
 
@@ -44,14 +44,14 @@ En el siguiente documento puede ver un articulo del uso de las clases entity y s
 
 Esta clase se crea dentro del paquete **entities** dentro del paquete **repositories**
 
-En esta clase Producto se define los siguientes atributos. Son private por que se aplica **encapsulamiento**
+En esta clase Cliente se define los siguientes atributos. Son private por que se aplica **encapsulamiento**
 
 - private Long id
 - private String nombre
 - private String codigo
 - private String descripcion
 
-![image](https://github.com/crodrigr/microservicios-spring-boot-confenalco/assets/31961588/bc569369-b836-44d2-b4cd-6c7c62b094fb)
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/4dcdeab8-f08a-40be-ae51-e8b546eb73e7)
 
 Continuación con los métodos getter and setter
 
