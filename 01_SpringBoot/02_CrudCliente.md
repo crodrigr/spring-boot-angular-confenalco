@@ -80,28 +80,30 @@ Estos métodos van actuar sobre la clase entity que se defina, en este caso **Cl
 
 ## 2.1 Interfaz RepositoryProducto
 
-![image](https://github.com/crodrigr/microservicios-spring-boot-confenalco/assets/31961588/5c61f5f0-f96e-4d52-99bd-e2bd0a62628d)
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/dda9a5e5-b94f-4005-8066-37ccea35b6f7)
+
 
 # 3. Services
 
-En la capa de services, es donde se definie la logica del negocio. Son los servicios que van ha ser consumidos por los controladores. Se define una interfaz con los servicio, en este caso **ProductoService** y dentro del paquete **impl** se define la clase **ProductoServiceImpl**, dicha clase va la definición de los métodos de clarados en la interfaz **ProductoService**
+En la capa de services, es donde se definie la logica del negocio. Son los servicios que van ha ser consumidos por los controladores. Se define una interfaz con los servicio, en este caso **ClienteService** y dentro del paquete **impl** se define la clase **ClienteServiceImpl**, dicha clase va la definición de los métodos de clarados en la interfaz **ClienteService**
 
 
 ## 3.1 Interfaz ProductoService
 
-![image](https://github.com/crodrigr/microservicios-spring-boot-confenalco/assets/31961588/39617c3a-9ba8-473f-ad47-e70682e03e3f)
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/8d6449a4-c066-4f13-93e2-58f42d45d2f6)
 
-## 3.2 Clase ProductoServiceImpl
+## 3.2 Clase ClienteServiceImpl
 
 Esta clase es una clase de tipo Servicio por eso tiene la anotación **@Service** dicha anotación hace que esta clase se especial y sea un bean el cual va permitir hacer inyección de dependencia. 
 
-Por otra parte, hace la inyección de dependencia de **RepositoryProducto**, que proporciona los métodos que van interactuar con la base de datos. 
+Por otra parte, hace la inyección de dependencia de **RepositoryCliente**, que proporciona los métodos que van interactuar con la base de datos. 
 
 Cuando se aplica la anotación @Transactional a un método o clase, Spring intercepta las llamadas a ese método y se encarga de iniciar, comprometer o revertir automáticamente las transacciones según sea necesario. Esto significa que si una excepción ocurre durante la ejecución del método anotado, Spring se asegurará de que se realice un rollback (reversión) de la transacción, lo que garantiza la integridad de los datos.
 
 [Documenetación spring-transaction-read-only](https://www.baeldung.com/spring-transactions-read-only)
 
-![image](https://github.com/crodrigr/microservicios-spring-boot-confenalco/assets/31961588/7d799bae-6638-4996-acc0-48b64f318d08)
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/8fdb8f3d-b263-4d3d-a7b4-7b6fe600e743)
+
 
 # 4. Controller
 
