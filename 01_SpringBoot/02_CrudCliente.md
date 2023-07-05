@@ -106,7 +106,7 @@ Por otra parte, hace la inyección de dependencia de **RepositoryCliente**, que 
 
 Cuando se aplica la anotación @Transactional a un método o clase, Spring intercepta las llamadas a ese método y se encarga de iniciar, comprometer o revertir automáticamente las transacciones según sea necesario. Esto significa que si una excepción ocurre durante la ejecución del método anotado, Spring se asegurará de que se realice un rollback (reversión) de la transacción, lo que garantiza la integridad de los datos.
 
-[Documenetación spring-transaction-read-only](https://www.baeldung.com/spring-transactions-read-only)
+[Documentación spring-transaction-read-only](https://www.baeldung.com/spring-transactions-read-only)
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/8fdb8f3d-b263-4d3d-a7b4-7b6fe600e743)
 
