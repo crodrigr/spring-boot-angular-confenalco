@@ -19,3 +19,9 @@ Se crea la entidad región dentro del paquete de entities.
 Esta relación es una relación **ManytoOne** en una sola direción, y va estar al lado del cliente. Se debe crear el atributo Region con sus métodos getter y setter.
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9fd40234-a99f-46f8-b595-5ae24b90f96a)
+
+# 4. Se agrega regiones en Import.sql
+
+En el archivo de import.sql se hace el insert de las regiones, con id, para relacionarlo con los clientes.
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/406a118f-c8d1-4d25-acdf-954ae2a353d8)
