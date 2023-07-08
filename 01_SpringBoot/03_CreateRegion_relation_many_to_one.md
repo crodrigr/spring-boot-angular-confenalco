@@ -56,13 +56,13 @@ El nuevo método va trae el listado de regiones.
 
 # 6. @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 
-La anotación @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) se utiliza en relaciones de entidades de Hibernate en aplicaciones de Spring Boot para evitar problemas de serialización y deserialización cíclica al mapear objetos relacionados.
+La anotación **@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})** se utiliza en relaciones de entidades de Hibernate en aplicaciones de Spring Boot para evitar problemas de serialización y deserialización cíclica al mapear objetos relacionados.
 
 Cuando tienes una relación entre entidades en Hibernate, como una relación de uno a muchos o muchos a muchos, Hibernate utiliza el mecanismo de carga diferida (lazy loading) para cargar los objetos relacionados solo cuando se acceden a ellos. Esto se hace mediante el uso de proxies o clases de implementación especiales generadas por Hibernate.
 
 Sin embargo, al serializar las entidades a JSON (por ejemplo, al devolver una respuesta HTTP con objetos relacionados), podría producirse un problema de serialización cíclica. Esto ocurre cuando un objeto A tiene una referencia al objeto B y el objeto B tiene una referencia nuevamente al objeto A, creando un bucle infinito de referencias.
 
-La anotación @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) se utiliza para evitar que se incluyan estas propiedades específicas de Hibernate en la serialización. Al anotar una relación con esta anotación, le estás diciendo a Jackson (la biblioteca utilizada por Spring Boot para la serialización y deserialización JSON) que ignore las propiedades hibernateLazyInitializer y handler durante el proceso de serialización.
+La anotación **@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})** se utiliza para evitar que se incluyan estas propiedades específicas de Hibernate en la serialización. Al anotar una relación con esta anotación, le estás diciendo a Jackson (la biblioteca utilizada por Spring Boot para la serialización y deserialización JSON) que ignore las propiedades hibernateLazyInitializer y handler durante el proceso de serialización.
 
 Aquí tienes un ejemplo de cómo se usaría esta anotación en una relación:
 
@@ -88,4 +88,4 @@ public class Child {
 
 ```
 
-En este ejemplo, al anotar la lista children en la clase Parent con @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}), se evita la serialización de esas propiedades específicas durante la respuesta JSON. Esto resuelve el problema de serialización cíclica que puede ocurrir al tener una relación bidireccional entre Parent y Child.
+En este ejemplo, al anotar la lista children en la clase Parent con **@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})**, se evita la serialización de esas propiedades específicas durante la respuesta JSON. Esto resuelve el problema de serialización cíclica que puede ocurrir al tener una relación bidireccional entre Parent y Child.
