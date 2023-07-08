@@ -18,6 +18,10 @@ Se crea la entidad región dentro del paquete de entities.
 
 Esta relación es una relación **ManytoOne** en una sola direción, y va estar al lado del cliente. Se debe crear el atributo Region con sus métodos getter y setter.
 
+El tipo de relacion **@ManyToOne** usa carga peresoza con Fetch Lazy, si se usa, debe tener la anotación **@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})** por que si no, genera error. Ver en el último apartado la explicación
+
+
+
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9fd40234-a99f-46f8-b595-5ae24b90f96a)
 
 # 4. Se agrega regiones en Import.sql
@@ -49,3 +53,39 @@ El nuevo método va trae el listado de regiones.
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/f411a96c-4c56-47e6-a770-58006a6a2ba0)
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/838b3245-cd76-4809-bc4b-2ea983f9f813)
+
+# 6. @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
+
+La anotación @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) se utiliza en relaciones de entidades de Hibernate en aplicaciones de Spring Boot para evitar problemas de serialización y deserialización cíclica al mapear objetos relacionados.
+
+Cuando tienes una relación entre entidades en Hibernate, como una relación de uno a muchos o muchos a muchos, Hibernate utiliza el mecanismo de carga diferida (lazy loading) para cargar los objetos relacionados solo cuando se acceden a ellos. Esto se hace mediante el uso de proxies o clases de implementación especiales generadas por Hibernate.
+
+Sin embargo, al serializar las entidades a JSON (por ejemplo, al devolver una respuesta HTTP con objetos relacionados), podría producirse un problema de serialización cíclica. Esto ocurre cuando un objeto A tiene una referencia al objeto B y el objeto B tiene una referencia nuevamente al objeto A, creando un bucle infinito de referencias.
+
+La anotación @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) se utiliza para evitar que se incluyan estas propiedades específicas de Hibernate en la serialización. Al anotar una relación con esta anotación, le estás diciendo a Jackson (la biblioteca utilizada por Spring Boot para la serialización y deserialización JSON) que ignore las propiedades hibernateLazyInitializer y handler durante el proceso de serialización.
+
+Aquí tienes un ejemplo de cómo se usaría esta anotación en una relación:
+
+```Java
+@Entity
+@Table(name = "parent")
+public class Parent {
+    @OneToMany(mappedBy = "parent")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    private List<Child> children;
+    // otras propiedades y métodos
+}
+
+@Entity
+@Table(name = "child")
+public class Child {
+    @ManyToOne
+    @JoinColumn(name = "parent_id")
+    private Parent parent;
+    // otras propiedades y métodos
+}
+
+
+```
+
+En este ejemplo, al anotar la lista children en la clase Parent con @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}), se evita la serialización de esas propiedades específicas durante la respuesta JSON. Esto resuelve el problema de serialización cíclica que puede ocurrir al tener una relación bidireccional entre Parent y Child.
