@@ -54,7 +54,7 @@ El nuevo método va trae el listado de regiones.
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/838b3245-cd76-4809-bc4b-2ea983f9f813)
 
-# 6. @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
+# 6. @JsonIgnoreProperties
 
 La anotación **@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})** se utiliza en relaciones de entidades de Hibernate en aplicaciones de Spring Boot para evitar problemas de serialización y deserialización cíclica al mapear objetos relacionados.
 
