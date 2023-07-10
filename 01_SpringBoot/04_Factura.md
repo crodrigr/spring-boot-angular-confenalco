@@ -46,6 +46,6 @@ Se crea una consulta personalizada para buscar productos por nombre. Esta consul
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/e8dc2f4c-d43b-4d1a-b18a-5c61d7ff22b8)
 
-## 6. Agregar los servicios de factura en ClienteService
+## 6. Servicios de factura en ClienteService
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/bfc81453-dc74-44ca-be88-2cf1c3dd6682)
