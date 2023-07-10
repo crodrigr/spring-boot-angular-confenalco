@@ -20,8 +20,15 @@ Dentro del directorio de entites se crea una nueva clase **Producto** de tipo **
 
 ## 3. Crear Factura
 
-## 3.1 Factura.java
+### 3.1 Factura.java
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/30b389ac-b526-40cc-a6e5-8df33ba797c3)
 
-## 3.2 Factura.java
+### 3.2 Factura getter y setter
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/48eb4a0e-e11a-45b2-9b49-fd7ba8d676e8)
+
+### 3.3 Relación cliente con factura
+
+Un cliente tiene una o muchas facturas. Construir la relación desde el cliente a factura de **OneToMany**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9e7a73a5-7225-46ae-8093-ca8df06aaad3)
+
