@@ -54,4 +54,8 @@ Se crea una consulta personalizada para buscar productos por nombre. Esta consul
 
 En la clase **ClienteServiceImpl** se implenta los método de factura definidos en la interfaz **ClienteService**
 
+### 7.1 Inyección de dependencia
+
+Se hace la inyección de dependencia de **ProductoRepository** y **FacturaRepository**
+
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/3b96f31d-7b84-4fa4-b37e-b6603061dfaa)
