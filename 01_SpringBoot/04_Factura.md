@@ -32,3 +32,7 @@ Un cliente tiene una o muchas facturas. Construir la relación desde el cliente 
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9e7a73a5-7225-46ae-8093-ca8df06aaad3)
 
+### 3.4 Insert de facturas
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9d376c64-8937-4a4e-9ab5-5e55904ece65)
+
