@@ -17,3 +17,11 @@ Dentro del directorio de entites se crea una nueva clase **Producto** de tipo **
 ## 2. Crear ItemFactura 
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/398bf97f-d446-4460-b647-1f85c56e244b)
+
+## 3. Crear Factura
+
+## 3.1 Factura.java
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/30b389ac-b526-40cc-a6e5-8df33ba797c3)
+
+## 3.2 Factura.java
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/48eb4a0e-e11a-45b2-9b49-fd7ba8d676e8)
