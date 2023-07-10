@@ -59,3 +59,8 @@ En la clase **ClienteServiceImpl** se implenta los método de factura definidos 
 Se hace la inyección de dependencia de **ProductoRepository** y **FacturaRepository**
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/3b96f31d-7b84-4fa4-b37e-b6603061dfaa)
+
+### 7.2 Implementación o sobreescritura de métodos
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/52d7930f-a561-4644-9bf8-6edbd2a69492)
+
