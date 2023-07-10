@@ -49,3 +49,9 @@ Se crea una consulta personalizada para buscar productos por nombre. Esta consul
 ## 6. Servicios de factura en ClienteService
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/bfc81453-dc74-44ca-be88-2cf1c3dd6682)
+
+## 7. ClienteServiceImpl implementación
+
+En la clase **ClienteServiceImpl** se implenta los método de factura definidos en la interfaz **ClienteService**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/3b96f31d-7b84-4fa4-b37e-b6603061dfaa)
