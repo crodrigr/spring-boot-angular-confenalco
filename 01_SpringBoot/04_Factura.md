@@ -40,7 +40,8 @@ Un cliente tiene una o muchas facturas. Construir la relación desde el cliente 
 
 Se crea una consulta personalizada para buscar productos por nombre. Esta consulta se va unar en el front para un buscador de productos. 
 
-![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/89434e80-0088-40ad-aef3-33b06ec1bfa6)
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9de75182-6314-410c-9a5f-2c9b019feaf7)
+
 
 ## 5. Crear la FacturaRepository
 
