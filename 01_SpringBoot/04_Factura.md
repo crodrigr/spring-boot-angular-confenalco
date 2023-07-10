@@ -64,3 +64,6 @@ Se hace la inyección de dependencia de **ProductoRepository** y **FacturaReposi
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/52d7930f-a561-4644-9bf8-6edbd2a69492)
 
+## 8. Crear el FacturaController
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/051f9541-f077-4955-8165-9e4bbc4b0fb0)
