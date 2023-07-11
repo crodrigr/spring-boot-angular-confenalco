@@ -12,3 +12,7 @@
 ### 2.2 Getter y Setter
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/72cbe6e0-fb77-4878-a61b-87cf37a844ed)
+
+## 3. Insert de usuario y roles
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/52fdd256-c60e-4cf8-8e36-7b0f383dd574)
