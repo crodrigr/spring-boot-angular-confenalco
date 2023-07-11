@@ -20,9 +20,8 @@ Esta relación es una relación **ManytoOne** en una sola direción, y va estar 
 
 El tipo de relacion **@ManyToOne** usa carga peresoza con Fetch Lazy, si se usa, debe tener la anotación **@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})** por que si no, genera error. Ver en el último apartado la explicación
 
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/72fe4f12-f5cb-44f4-a77d-5ed6b3efca43)
 
-
-![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9fd40234-a99f-46f8-b595-5ae24b90f96a)
 
 # 4. Se agrega regiones en Import.sql
 
