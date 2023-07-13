@@ -6,16 +6,16 @@ Se crea la clase Role de tipo Entity. Tiene dos atributos.
 
 ```mermaid
 classDiagram
-    User "1..*" <--> "1..*" Role
-    User : -Long id
-    User : -String username
-    User : -String password
-    User : -Boolean enable
-    User : -String nombre
-    User : -String apellido
-    User : -String email
-    User: +getter()
-    User: +setter()
+    Usuario "1..*" <--> "1..*" Role
+    Usuario : -Long id
+    Usuario : -String username
+    Usuario : -String password
+    Usuario : -Boolean enable
+    Usuario : -String nombre
+    Usuario : -String apellido
+    Usuario : -String email
+    Usuario: +getter()
+    Usuario: +setter()
     class Role{
         -Long id
         +String nombre
