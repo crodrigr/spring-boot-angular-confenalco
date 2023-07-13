@@ -2,7 +2,7 @@
 
 ## 1. Crear entity Role
 
-Se crea la clase Role de tipo Entity. Tiene dos atributos. 
+Se crea la clase Role de tipo Entity. A continuación el diagrama de clases. Es una relación de muchos a muchos bidireccional entre **Usuario** y **Role** 
 
 ```mermaid
 classDiagram
