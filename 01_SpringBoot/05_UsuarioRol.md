@@ -1,7 +1,5 @@
 # Usuario y Roles
 
-## 1. Crear entity Role
-
 Se crea la clase Role de tipo Entity. A continuación el diagrama de clases. Es una relación de muchos a muchos bidireccional entre **Usuario** y **Role** 
 
 ```mermaid
@@ -24,12 +22,39 @@ classDiagram
     
 ```
 
-## 1.1 Crear entity Role.
+## 1. Crear entity Role
+
+```mermaid
+classDiagram    
+     class Role{
+        -Long id
+        +String nombre
+        +getterSetter()        
+    }
+    
+```
+
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/970d7e93-0c26-4795-ae4e-f0c94fea4d87)
 
 ## 2. Crear entity Usuario
 
 Se crea la clase Usuario de tipo Entity
+
+```mermaid
+classDiagram    
+    class Usuario{
+         -Long id
+         -String username
+         -String password
+         -Boolean enable
+         -String nombre
+         -String apellido
+         -String email
+         +getter()
+         +setter()     
+    }
+    
+```
 
 ### 2.1 Atributos
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/488f355e-6bd4-47fb-ad7c-c0716da7d5e9)
