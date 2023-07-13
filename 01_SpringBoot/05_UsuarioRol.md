@@ -24,7 +24,7 @@ classDiagram
     
 ```
 
-
+## 1.1 Crear entity Role.
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/970d7e93-0c26-4795-ae4e-f0c94fea4d87)
 
 ## 2. Crear entity Usuario
