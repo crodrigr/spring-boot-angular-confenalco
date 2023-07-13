@@ -1,5 +1,7 @@
 # Usuario y Roles
 
+En todos sistema tiene su modulo de **usuarios**. Un usuario puede tener varios permisos, y estos permisos se puede agrupar, y la mejor forma de hacerlo es por medio de **roles**. Por lo tanto, se va tener una relación entre **usuario** y **role**. Un usuario puede tener uno o varios roles, y un role puede estar asignado en varios usarios. 
+
 Se crea la clase Role de tipo Entity. A continuación el diagrama de clases. Es una relación de muchos a muchos bidireccional entre **Usuario** y **Role** 
 
 ```mermaid
