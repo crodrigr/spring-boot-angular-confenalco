@@ -38,7 +38,7 @@ Un cliente tiene una o muchas facturas. Construir la relación desde el cliente 
 
 ## 4. Crear el ProductoRepository
 
-Se crea una consulta personalizada para buscar productos por nombre. Esta consulta se va unar en el front para un buscador de productos. 
+Se crea una consulta personalizada para buscar productos por nombre. Esta consulta se va usar en el front para un buscador de productos. 
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9de75182-6314-410c-9a5f-2c9b019feaf7)
 
