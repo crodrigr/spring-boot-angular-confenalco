@@ -180,6 +180,33 @@ Obtener un cliente al cargar un formulario desde el botón actualizar.
 
 ![image](https://user-images.githubusercontent.com/31961588/167058376-42ed0348-4391-468a-a8df-f07a9143faf9.png)
 
+<details><summary>Mostrar código</summary>
+<p>
+
+
+```typescript
+
+ ngOnInit(): void {
+    this.getRegiones();
+    this.getCargarCliente();
+    
+  }
+
+  getCargarCliente(): void{
+    this.activatedRouter.paramMap.subscribe(params=>{
+      let id=params.get('id');
+       if(id){
+         this.clienteService.getCliente(Number(id)).subscribe(cliente=>{
+            this.cliente=cliente
+         })
+       }
+    }) 
+
+  }
+```
+</p>
+</details>
+
 <br>
 
 ![image](https://user-images.githubusercontent.com/31961588/167058449-a7fe7657-ce8d-4b39-a732-c45be2b4dced.png)
