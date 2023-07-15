@@ -81,6 +81,8 @@ Definimos el método **getRegiones** en  **cliente.service.ts**, dicho servicio 
 En el componente del form, definimos un metodo que, traiga el back todas la regiones y las guardes en la lista regiones, este método se debe ejecutar cada vez 
 que se carga el componente form.
 
+En el componente **form**, se define un método que consume el servició anteriormente creado que traer del **api** la lista de regiones. Este método se debe ejecutar cada vez que termina de carga el componente, especificamente en el método **OnInit()** del ciclo de vida de **Angular**
+
 ![image](https://user-images.githubusercontent.com/31961588/166976252-7518cc50-d197-4400-b7eb-9036c10bee4a.png)
 
 <br>
