@@ -76,13 +76,13 @@ export interface Cliente{
 
 
 
-### 4. Crear servicio de cliente
+## 4. Crear servicio de cliente
 
-Un servicio en angular es una clase ofrece los servicios serán invocados al backed. Una clase de service aplica inyección de dependencia. Para crear una clase de servicio se hace a través del comando **ng g service cliente** . Crea dos archivos cliente.service.ts y cliente.service.spec.ts, este ultimo no lo vamos a usar por que es para programar pruebas automáticas. 
+Un servicio en angular es una clase consumen los servicios del backed. Una clase de **service** aplica inyección de dependencia. Para crear una clase de servicio se hace a través del comando **ng g service cliente** . Crea dos archivos **cliente.service.ts** y **cliente.service.spec.ts**, este último no lo vamos a usar por que es para programar pruebas automáticas. 
 
 ![image](https://user-images.githubusercontent.com/31961588/166608399-252d5768-76f6-40e8-aaf2-9c92369717c4.png)
 
-Se observa que tiene decorador @Injectable, por lo tanto, usa inyección de dependencias, esto nos permite usarla en cualquier componente. 
+Se observa que tiene decorador **@Injectable**, por lo tanto, usa inyección de dependencias, esto permite que se pueda usar desde cualquier componente. 
 
 ![image](https://user-images.githubusercontent.com/31961588/166608638-0c88ae2a-e3ee-423b-873f-0a3ead5e1666.png)
 
@@ -112,9 +112,12 @@ Definimos el metodo getClientes, el cual, va hacer una petición get al back par
 
 ![image](https://user-images.githubusercontent.com/31961588/166610288-b60a0fb2-add1-4dfb-9942-7ad81e75094c.png)
 
-**Código de cliente.service.ts**
 
-```TypeScript
+<details><summary>Mostrar código</summary>
+<p>
+
+
+```typescript
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent,HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -136,7 +139,14 @@ export class ClienteService {
     return this.http.get<Cliente[]>(this.urlApi + '/clientes');
   }
 }
+
 ```
+
+</p>
+</details>
+
+
+
 
 ## 5. Crear una table que muestre el listado de clientes
 
