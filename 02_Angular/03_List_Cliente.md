@@ -10,6 +10,8 @@ Se crea un directorio **cliente** dentro **src** para construir el componente cl
 <br>
 <br>
 <br>
+<br>
+
 ## 2. Componente cliente
 
 Con el comando **ng g component cliente --flat** se crea el componente de cliente que cuenta de cuatro archivos: .html, .ts, css. spec.ts 
@@ -22,6 +24,8 @@ Archivos que se crearon
 <br>
 <br>
 <br>
+<br>
+
 ## 3. Modelos de cliente. 
 
 En la parte del front vamos necesitar crear el tipo de dato clientes y regiones. Hay dos maneras: clase o interfaz. Se usa clase cuando vayamos a instanciar objetos a traves del operador new, e interfaz en caso contrario. En nuestro caso lo vamos hacer con interfaz por que tomamos la data desde el back. 
@@ -76,6 +80,7 @@ export interface Cliente{
 
 </p>
 </details>
+<br>
 <br>
 <br>
 <br>
@@ -148,6 +153,7 @@ export class ClienteService {
 </p>
 </details>
 
+<br>
 <br>
 <br>
 <br>
