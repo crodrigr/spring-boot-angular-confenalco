@@ -40,7 +40,7 @@ En **cliente.service.ts** se crea un método **update** cliente, el cual, comsum
 
 ## 3. Update cliente form.component.ts
 
-En el **form.compoente.ts** se crea un méto **update** cliente para que sea llamado desde el botón guarda. 
+En el **form.component.ts** se crea un método **update** cliente para que sea llamado desde el botón guarda. 
 
 ![image](https://user-images.githubusercontent.com/31961588/167056018-629c315d-a082-4993-b516-2afbe4e90ba2.png)
 
