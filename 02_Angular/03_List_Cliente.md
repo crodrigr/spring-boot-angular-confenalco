@@ -76,40 +76,6 @@ export interface Cliente{
 
 
 
-![image](https://user-images.githubusercontent.com/31961588/166587888-da6adf25-711e-4fc5-b9b5-f05f3913fbbc.png)
-
-### 3.3 Relacionamos el cliente con region.
-
-Recuerde que un cliente tiene una region, por lo tanto, existe una relación, similar a la del back entre region y cliente. 
-
-En **clients.ts** se hace el import de region y se define el atributo region. 
-
-![image](https://user-images.githubusercontent.com/31961588/166588102-03917829-0192-4aa0-82af-3c44c6d1ade8.png)
-
-**Código de Cliente.ts**
-
-```TypeScript
-import {Region} from './region';
-
-export interface Cliente{
-    id?: number;
-    nombre?: string;
-    apellido?: string;
-    createAt?: string;
-    email?: string;
-    region?: Region; 
-   
-
-}
-```
-**Código de Region.ts**
-```TypeScript
-export interface Region{
-    id?: number;
-    nombre?: string;
-}
-```
-
 ### 4. Crear servicio de cliente
 
 Un servicio en angular es una clase ofrece los servicios serán invocados al backed. Una clase de service aplica inyección de dependencia. Para crear una clase de servicio se hace a través del comando **ng g service cliente** . Crea dos archivos cliente.service.ts y cliente.service.spec.ts, este ultimo no lo vamos a usar por que es para programar pruebas automáticas. 
