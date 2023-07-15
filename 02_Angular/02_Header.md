@@ -12,7 +12,7 @@ Antes de iniciar con la construcción de nuestra aplicación web se va hacer la 
 
 En el **index.html** colocamos los **scripts** de **boostrap** y de los icon.
 
-#### 1.2
+#### 1.2 Los scripts CDN
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/d7cb1073-34e7-4ee5-b908-942193424e75)
 
