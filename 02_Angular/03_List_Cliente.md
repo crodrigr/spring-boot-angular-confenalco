@@ -7,7 +7,9 @@ Se va crear un componente que muestre el listado de los cliente.
 Se crea un directorio **cliente** dentro **src** para construir el componente cliente, el cual, tendra toda la funcionalidad del **crud** del cliente: **listar**, **crear**, **actulizar** y **eliminar**
 
 ![image](https://user-images.githubusercontent.com/31961588/166582863-03158336-c664-42d2-be8e-75bfe80d3ebd.png)
-
+<br>
+<br>
+<br>
 ## 2. Componente cliente
 
 Con el comando **ng g component cliente --flat** se crea el componente de cliente que cuenta de cuatro archivos: .html, .ts, css. spec.ts 
@@ -74,10 +76,9 @@ export interface Cliente{
 
 </p>
 </details>
-
-
-
-
+<br>
+<br>
+<br>
 ## 4. Crear servicio de cliente
 
 Un servicio en angular es una clase consumen los servicios del backed. Una clase de **service** aplica inyección de dependencia. Para crear una clase de servicio se hace a través del comando **ng g service cliente** . Crea dos archivos **cliente.service.ts** y **cliente.service.spec.ts**, este último no lo vamos a usar por que es para programar pruebas automáticas. 
@@ -146,7 +147,9 @@ export class ClienteService {
 </p>
 </details>
 
-
+<br>
+<br>
+<br>
 
 
 ## 5. Crear una table que muestre el listado de clientes
