@@ -20,7 +20,7 @@ Aquí están algunas características y conceptos clave de Angular:
 
 Angular tiene una comunidad grande y activa, lo que significa que hay muchos recursos, tutoriales y bibliotecas de terceros disponibles para ayudar a los desarrolladores a construir aplicaciones Angular de manera eficiente. Es ampliamente utilizado en la industria y ha sido adoptado por muchas empresas para desarrollar aplicaciones empresariales a gran escala.
 
-## 1. Ambiente de desarrallo
+## 1. Ambiente de desarrollo
 
 Para trabajar con angular se debe tener las siguientes herramientas:
 
@@ -36,5 +36,21 @@ Verificar que tenga todas al herramientas
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/224fa6fc-84a0-4915-a570-b543077005bd)
 
+## 2. Crea proyecto de angular
 
+Angular es un **framework** que ofrece varios comandos del **cli** que facilita el desarrollo de aplicaciones Web. Para crear un proyecto se hace a través del siguiente comando: **ng new <nombre-app>**. Al ejecutar este comando debe estár dentro del directorio de su area de trabajo. 
+
+#### 2.1 ng new app
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/b0cc9510-988f-4f63-a744-5fa811107b8e)
+
+## 3. Start up proyecto
+
+Angular tiene un servidor web embebido el cual se inia con el comando **ng serve**
+
+#### 3.1 ng server
+
+Una vez se crea el proyecto debe ingresa por la terminal al directorio del proyecto creado y ejecutar el comando **ng serve**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/e1dd3a94-f911-4853-85fb-3763c1991798)
 
