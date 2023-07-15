@@ -67,7 +67,7 @@ Definimos el método **getRegiones** en  **cliente.service.ts**, dicho servicio 
 <br>
 
 
-### 1.3.2 Método getRegiones en el form.component.ts
+##### 1.3.2 Método getRegiones en el form.component.ts
 
 En el componente del form, definimos un metodo que, traiga el back todas la regiones y las guardes en la lista regiones, este método se debe ejecutar cada vez 
 que se carga el componente form.
