@@ -122,15 +122,25 @@ En **cliente.component.html**
 
 ![image](https://user-images.githubusercontent.com/31961588/167031005-12cb0976-821b-4857-949d-1bb793e0aeea.png)
 
+<details><summary>Mostrar código</summary>
+<p>
+
 ```Html
  <div class="my-2 text-left">
          <button type="button" routerLink='/clientes/form' class="btn btn-success">Crear</button>       
       </div>
 ```
+<br>
+</p>
+
+</details>
 
 #### 1.6 Configurar path en **app-routing.module.ts**
 
 ![image](https://user-images.githubusercontent.com/31961588/167031216-63895837-e2fb-4e9c-8e6f-200f87446a42.png)
+
+<details><summary>Mostrar código</summary>
+<p>
 
 ```TypeScript
 import { NgModule } from '@angular/core';
@@ -149,6 +159,9 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 ```
+</p>
+</details>
+
 <br>
 <br>
 <br>
