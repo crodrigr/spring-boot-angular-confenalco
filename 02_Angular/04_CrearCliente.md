@@ -38,7 +38,7 @@ En **Form.component.ts** se necesita las siguiente librerias para crear y actuli
 
 ##### 1.3.1 Servicio getRegiones 
 
-En la interfaz region en **cliente.service.ts** se debe importar, ya que ahí se va construir un servicio que proporcion el listado de regiones
+La interfaz region en **cliente.service.ts** se debe importar, ya que ahí se va construir un servicio que proporcion el listado de regiones
 
 ![image](https://user-images.githubusercontent.com/31961588/166974654-6ae4b98b-f6bb-4df0-a4a6-f863616df33b.png)
 
