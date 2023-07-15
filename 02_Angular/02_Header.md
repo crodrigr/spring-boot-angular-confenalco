@@ -80,7 +80,7 @@ Angular se basa en componentes, y el componente por defecto que tiene todo proye
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/878596e2-6583-41a8-b162-3c5b6e465975)
 
-## 4. Creamos un folder en el proyecto para el componente header
+## 4. Crear componente header
 
 ![image](https://user-images.githubusercontent.com/31961588/164358080-d3ec885d-1ac7-4fdf-ac94-46511bbad1f7.png)
 
@@ -88,23 +88,24 @@ En la terminal del directorio creado **header** y a través del comando **ng gen
 
 ![image](https://user-images.githubusercontent.com/31961588/164358535-867a652b-25e6-4b83-af2f-6a7580f0f512.png)
 
-Se crean tres archivos: header.component.html, header.component.spec.ts, header.component.ts, header.component.css y actuliza el app.module.ts. Un **componente** en angular tiene estos tres archivos por defecto. Y todo componente debe estar registrado en el **app.modules.ts**
+Se crean tres archivos: header.component.html, header.component.spec.ts, header.component.ts, header.component.css y actuliza el app.module.ts. Un **componente** en angular tiene estos cuatro archivos por defecto. Y todo componente debe estar registrado en el **app.modules.ts**
 
 ![image](https://user-images.githubusercontent.com/31961588/164358790-e8b3fa19-17bd-4a8a-8537-3823f5091bcd.png)
 
-## 4. Crear un nav bar en el header
+## 5. Nav bar en el header
 
-**Buscamos un ejemplo de un nav bar en boostrap y lo copiamos**
+Se busca un ejemplo de un nav bar en boostrap y lo copiamos
 
 ![image](https://user-images.githubusercontent.com/31961588/164359439-5deb4691-3578-41a2-b1e6-d16600afd9b9.png)
 
 ![image](https://user-images.githubusercontent.com/31961588/164359638-2f4c7bf2-4868-4122-8e98-e4b918d79530.png)
 
+<details><summary>Mostrar código</summary>
+<p>
 
-**Código**
 
-```Html
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+```html
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,8 +142,13 @@ Se crean tres archivos: header.component.html, header.component.spec.ts, header.
   </div>
 </nav>
 ```
+```
 
-## 5 app.component htlm usamos el componente header creado a través del selector <app-header>
+</p>
+</details>
+
+
+## 6 app.component htlm usamos el componente header creado a través del selector <app-header>
   
   ![image](https://user-images.githubusercontent.com/31961588/164360228-0f8961fc-d3bd-46ec-8a9b-0874d2480999.png)
 
