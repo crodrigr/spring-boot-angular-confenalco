@@ -57,16 +57,14 @@ En la tabla de cliente se tiene  un botón editar, este botón debe recibir el i
 ![image](https://user-images.githubusercontent.com/31961588/167056922-85916b46-6952-400f-afa3-7aa46c5209a9.png)
 
 <br>
-<br>
-<br>
+
 
 ### 4.2 Botón editar cliente en cliente.component.html
 
 ![image](https://user-images.githubusercontent.com/31961588/167057207-0b2b88e4-b4a1-4bae-9065-6937c4e30d9d.png)
 
 <br>
-<br>
-<br>
+
 
 ### 4.3 Obtener cliente en formulario
 
