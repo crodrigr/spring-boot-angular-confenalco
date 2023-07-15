@@ -14,7 +14,7 @@ Crear el método delete en **cliente.service.ts**. Este método consume del **ap
  
 ```typescript
 delete(id: number): Observable<any>{
-  return this.http.delete<any>(`${this.urlApi}/clientes/${id}`).pipe(
+  return this.http.delete<any>(`${this.urlApi}/cliente/${id}`).pipe(
     catchError(e=>{
        if(e.error.mensaje){
          console.error(e.error.mensaje);
