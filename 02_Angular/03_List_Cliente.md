@@ -45,13 +45,33 @@ export interface Region{
 </p>
 </details>
 
-### 3.2 Interfaz cliente
+#### 3.2 Interfaz cliente
 
-![image](https://user-images.githubusercontent.com/31961588/166587617-ac1f668b-f512-4638-9fd6-2f5994d436c5.png)
+La interfaz **Cliente** es un espejo de la clase entity **Cliente** del **backend**, las cuales, se debe corresponder por que sus atributos de relacionan uno con el otro. 
 
-Definimos los atributos que tiene nuestro cliente, que en esencia son los mimos que se tiene en la clase cliente del back.
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/a41fc0aa-ad40-4c88-bbf5-450453a2e304)
 
-![image](https://user-images.githubusercontent.com/31961588/166587740-54923b5e-e6a8-41ca-baca-6bee37af0109.png)
+<details><summary>Mostrar código</summary>
+<p>
+
+
+```typescript
+   import {Region} from './region';
+
+export interface Cliente{
+    id?: number;
+    nombre?: string;
+    apellido?: string;
+    createAt?: string;
+    email?: string;
+    region?: Region; 
+   
+
+}
+```
+
+</p>
+</details>
 
 
 
