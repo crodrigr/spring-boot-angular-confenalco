@@ -15,9 +15,9 @@ Se crea el componente form que va tener el formulario para la creación y actuli
 ![image](https://user-images.githubusercontent.com/31961588/166971616-971546c2-3023-4f2e-9680-408f3b9f85fa.png)
 
 
-#### 1.2 Librerias para form.component.ts importamos
+#### 1.2 Librerias para form.component.ts 
 
-En **form.component.ts** se necesita las siguiente librerias para crear y actulizar un cliente en el formulario.
+En **form.component.ts** se necesita las siguiente librerias para crear y actulizar un cliente en el formulario, por lo tanto se debe importar.
 
 ![image](https://user-images.githubusercontent.com/31961588/166972576-48537fa7-88e4-4c00-a329-e6c1918f8fa7.png)
 
