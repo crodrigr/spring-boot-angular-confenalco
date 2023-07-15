@@ -58,4 +58,12 @@ Una vez se crea el proyecto debe ingresa por la terminal al directorio del proye
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/2760b390-1207-4028-a3fe-51b825d782fa)
 
 
+## 4. Estructura de un proyecto de angular
+
+Todo proyecto en angular va tener la siguiente estructura, la cual, tiene un directorio **src** donde están todos los archivos fuentes u otros archivos de configuración. 
+
+#### 4.1 Directorios y archivos
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/ee6a0878-5629-4d0f-8e5e-f783616a71eb)
+
 
