@@ -41,7 +41,7 @@ Antes se declara el router para usarlo en el método getCliente, esto va permiti
 <details><summary>Mostrar código</summary>
 <p>
 
-```typescrit
+```typescript
 getCliente(id: number): Observable<Cliente>{    
     return this.http.get<Cliente>(`${this.urlApi}/cliente/${id}`).pipe(
       catchError(e=>{
