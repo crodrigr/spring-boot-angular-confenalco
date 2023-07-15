@@ -29,7 +29,7 @@ En **Form.component.ts** se necesita las siguiente librerias para crear y actuli
 
 ##### 1.3.1 Servicio getRegiones 
 
-**Importamos la interfaz region en cliente.service.ts**
+En la interfaz region en **cliente.service.ts** se debe importar, ya que ahí se va construir un servicio que proporcion el listado de regiones
 
 ![image](https://user-images.githubusercontent.com/31961588/166974654-6ae4b98b-f6bb-4df0-a4a6-f863616df33b.png)
 
@@ -38,8 +38,7 @@ import { Region } from './region';
 
 ```
 
-Definimos el getRegiones el cliente.service.ts, dicho servicio es get, el cual, llama al contrallador clientes y invoca el endpoint /cliente/regiones, el cual, 
-listado de todas la regiones que tenemos en nuestra base datos. 
+Definimos el método **getRegiones** en  **cliente.service.ts**, dicho servicio es **get**, el cual, llama al contrallador clientes y invoca el endpoint **/cliente/regiones**, que retorna el listado de todas la regiones desde la base de datos. . 
 
 ![image](https://user-images.githubusercontent.com/31961588/166975145-b758168a-1ab7-4d97-8605-571fdf74c53d.png)
 
