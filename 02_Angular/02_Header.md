@@ -53,4 +53,17 @@ En el archivos **styles.css** se configura los estilos globales, es decir, acá 
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/5e710b0b-2644-4e1b-a9d4-be19237807e2)
 
+<details><summary>Mostrar código</summary>
+<p>
 
+**Styles.css***
+
+```css
+  /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+```
+
+</p>
+</details>
