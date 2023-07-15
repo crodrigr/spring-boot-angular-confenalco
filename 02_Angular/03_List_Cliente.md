@@ -120,7 +120,7 @@ Definimos el metodo getClientes, el cual, va hacer una petición get al back par
 ```typescript
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent,HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 import { Observable, throwError } from 'rxjs';
 import { Cliente } from './cliente';
 
@@ -139,7 +139,6 @@ export class ClienteService {
     return this.http.get<Cliente[]>(this.urlApi + '/clientes');
   }
 }
-
 ```
 
 </p>
