@@ -242,7 +242,9 @@ export class ClienteComponent implements OnInit {
 
 
 #### 5.2 cliente.component.html
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166612680-976a55c6-058d-4070-b1ae-f065c942ed50.png)
 
 <br>
