@@ -1,5 +1,18 @@
 # Crear cliente
 
+
+```mermaid
+flowchart LR
+    A[ComponentForm]-->C[form.component.ts]
+    A-->D[form.component.html]
+    A-->E[form.component.css]
+    F[cliente.service.ts]:::someclass-->A
+    classDef someclass fill:#f96  
+
+```
+
+
+
 <br>
 
 ## 1. Componente form, formulario cliente
