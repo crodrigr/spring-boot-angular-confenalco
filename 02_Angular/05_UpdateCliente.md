@@ -24,8 +24,11 @@ Antes se declara el router para usarlo en el método getCliente, esto va permiti
 <br>
 
 ## 2. Método Update cliente en cliente.service.ts
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/167055487-067ab694-a453-44c7-956a-d347d1157d6f.png)
+
 <br>
 <br>
 <br>
