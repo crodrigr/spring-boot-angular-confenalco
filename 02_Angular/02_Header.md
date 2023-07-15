@@ -67,3 +67,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 </p>
 </details>
+
+## 3. Probar estilos
+
+Angular se basa en componentes, y el componente por defecto que tiene todo proyecto es el **app.componente**, entonces en el archivo **app.component.html** borramos todo y colocamos **<h1>Hola mundo</h1>** 
+
+#### 3.1 Hola mundo 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/269c5509-ebd3-422e-af63-44ffb2149a8b)
+
+#### 3.2 Visualizar 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/878596e2-6583-41a8-b162-3c5b6e465975)
