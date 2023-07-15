@@ -55,7 +55,7 @@ import { Region } from './region';
 
 <br>
 
-Definimos el método **getRegiones** en  **cliente.service.ts**, dicho servicio es **get**, el cual, llama al contrallador clientes y invoca el endpoint **/cliente/regiones**, que retorna el listado de todas la regiones desde la base de datos. . 
+Definimos el método **getRegiones** en  **cliente.service.ts**, dicho servicio es **get**, el cual, llama al contrallador clientes e invoca el endpoint **/cliente/regiones**, que retorna el listado de todas la regiones desde la base de datos. . 
 
 ![image](https://user-images.githubusercontent.com/31961588/166975145-b758168a-1ab7-4d97-8605-571fdf74c53d.png)
 
