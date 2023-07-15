@@ -116,7 +116,7 @@ Se crea en el **cliente.service.ts** el método **create** que hace una petició
 
 <br>
 
-## 1.5 Botón crear en la tabla clientes
+##### 1.5 Botón crear en la tabla clientes
 
 En **cliente.component.html**
 
@@ -128,7 +128,7 @@ En **cliente.component.html**
       </div>
 ```
 
-Configuramos la ruta en **app-routing.module.ts**
+##### 1.6 Configurar path en **app-routing.module.ts**
 
 ![image](https://user-images.githubusercontent.com/31961588/167031216-63895837-e2fb-4e9c-8e6f-200f87446a42.png)
 
@@ -153,10 +153,14 @@ export class AppRoutingModule { }
 <br>
 <br>
 
-# 2 Código final de form.component.ts, form.componente.html cliente.service.ts
+# 2 Código final
 
-### 2.1 form.component.ts
-```TypeScript
+##### 2.1 form.component.ts
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typeScript
 
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/Cliente/cliente';
@@ -213,10 +217,21 @@ export class FormComponent implements OnInit {
 }
 
 ```
+
+
+
+</p>
+</details>
+
+
 <br>
 
-### 2.2 form.componente.html
-```Html
+#####  2.2 form.componente.html
+
+<details><summary>Mostrar código</summary>
+<p>
+  
+```html
 <ul class="alert alert-danger" *ngIf="errores.length > 0">
     <li *ngFor="let err of errores">
       {{ err }}
@@ -272,15 +287,20 @@ export class FormComponent implements OnInit {
   
      </div>  
   </div>
-  
-
-  
 
 ```
+</p>
+</details>
+
 <br>
 
 ### 2.3 cliente.service.ts
-```TypeScript
+
+<details><summary>Mostrar código</summary>
+<p>
+
+
+```typeScript
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent,HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -326,3 +346,5 @@ export class ClienteService {
 }
 
 ```
+</p>
+</details>
