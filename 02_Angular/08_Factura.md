@@ -36,15 +36,11 @@ Crear el directorio para los componentes de modulo de factura
 ## 2. Modelos de facturas
 
 
-Se crea los modelos del módulo de facturas, el cual, debe ser un espejo al modelo que está definido en el backend
+Se crea los modelos del módulo de facturas, el cual, debe ser un espejo al modelo que está definido en el backend.  Los modelos se agrupan dentro de directorio **models** que esta dentro de **factura**.
 
 <br>
 
-### 2.1 Se crea el directorio models dentro de facturas. 
-
-<br>
-
-#### 2.1.1 Clase producto
+#### 2.1 Clase producto
 
 ![image](https://user-images.githubusercontent.com/31961588/168699078-b91944a5-4f73-4170-b2e6-b890d4a631ea.png)
 
@@ -66,7 +62,7 @@ export class Producto {
 
 <br>
 
-#### 2.1.2 Clase item-producto
+#### 2.2 Clase item-producto
 
 ![image](https://user-images.githubusercontent.com/31961588/168699435-9315a172-c61d-4077-80ec-92319fa80e86.png)
 
@@ -92,7 +88,7 @@ export class ItemFactura {
 
 <br>
 
-#### 2.1.3  Clase factura
+#### 2.3  Clase factura
 
 ![image](https://user-images.githubusercontent.com/31961588/168699564-00e4af0e-838b-4b48-b821-0c35dcc4f448.png)
 
@@ -129,7 +125,7 @@ export class Factura {
 
 <br>
 
-#### 2.1.4  Directorio service
+#### 2.4  Directorio service
 
 Dentro del directorio factura se crea un directorio **service**
 
@@ -137,7 +133,7 @@ Dentro del directorio factura se crea un directorio **service**
 
 <br>
 
-#### 2.1.5  Clase factura.services.ts
+#### 2.5  Clase factura.services.ts
 
 ![image](https://user-images.githubusercontent.com/31961588/168706744-52e67ee1-8acc-40c7-8d37-568b75dddec6.png)
 
@@ -146,7 +142,7 @@ Dentro del directorio factura se crea un directorio **service**
 
 <br>
 
-#### 2.1.5 Servicios del modulo de factura
+#### 2.5 Servicios del modulo de factura
 
 Se define los servicios que se van a llamar al back para modulo de factura
 
