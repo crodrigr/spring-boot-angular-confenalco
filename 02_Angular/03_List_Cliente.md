@@ -21,11 +21,15 @@ Se crea un directorio **cliente** dentro **src** para construir el componente cl
 ## 2. Componente cliente
 
 Con el comando **ng g component cliente --flat** se crea el componente de cliente que cuenta de cuatro archivos: .html, .ts, css. spec.ts 
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166586712-f4aed45b-6996-41c3-a8ca-7d6b106c6f16.png)
 
 Archivos que se crearon
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166586927-dde0ca3b-eb55-4bc7-8b5a-7904c96c4d4a.png)
 <br>
 <br>
@@ -39,7 +43,9 @@ En la parte del front vamos necesitar crear el tipo de dato clientes y regiones.
 #### 3.1 Interfaz region
 
 Primero se crea la interfaz **region**, que no tiene dependencia como **cliente** que depende de ella. 
+
 <br>
+
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/bdddec82-4d3a-4e8a-b23d-744ce844df98)
 
 
@@ -62,7 +68,9 @@ export interface Region{
 #### 3.2 Interfaz cliente
 
 La interfaz **Cliente** es un espejo de la clase entity **Cliente** del **backend**, las cuales, se debe corresponder por que sus atributos de relacionan uno con el otro. 
+
 <br>
+
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/a41fc0aa-ad40-4c88-bbf5-450453a2e304)
 
 <details><summary>Mostrar código</summary>
@@ -94,37 +102,49 @@ export interface Cliente{
 ## 4. Crear servicio de cliente
 
 Un servicio en angular es una clase consumen los servicios del backed. Una clase de **service** aplica inyección de dependencia. Para crear una clase de servicio se hace a través del comando **ng g service cliente** . Crea dos archivos **cliente.service.ts** y **cliente.service.spec.ts**, este último no lo vamos a usar por que es para programar pruebas automáticas. 
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166608399-252d5768-76f6-40e8-aaf2-9c92369717c4.png)
 
 Se observa que tiene decorador **@Injectable**, por lo tanto, usa inyección de dependencias, esto permite que se pueda usar desde cualquier componente. 
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166608638-0c88ae2a-e3ee-423b-873f-0a3ead5e1666.png)
 
 #### 4.1 Configuración path del back del Enviroment 
 
 Esta es una variable de entorno vamos a configurar con la path del backend. 
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166608812-77c55f5f-91a0-483e-bd16-5cc6b51d005d.png)
 
 #### 4.2 HttpClient
 
 El httpClient me permite hacer peticiones http: get, post, delete, push, en este caso se van hacer a nuestro backend. 
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166609142-5b31f255-530a-4c23-a64e-eed8b15960de.png)
 
 
 HttpRequest,HttpEvent y HttpHeaders se importa para el manejo de los headers y request. 
 
 #### 4.3 Definimos el metodo constructor
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166609660-31539a53-266e-4eaa-8a03-f2bbc8aa1516.png)
 
 
 #### 4.4 Método getClientes
 
 Definimos el metodo getClientes, el cual, va hacer una petición get al back para traer todos los clientes que tenemos registrados en nuestra base de datos. 
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166610288-b60a0fb2-add1-4dfb-9942-7ad81e75094c.png)
 
 
@@ -170,7 +190,9 @@ export class ClienteService {
 #### 5.1 cliente.component.ts
 
 El cliente.component.ts se define la lógica del componente, en este caso, los métodos que vamos a usar para llamar al backend para traer todos los registros de nuestros clientes y mostrarlos en nuestra tabla de clientes. 
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166611612-030a1146-efd5-4c32-b990-6d5162a4778e.png)
 
 
@@ -222,7 +244,9 @@ export class ClienteComponent implements OnInit {
 #### 5.2 cliente.component.html
 <br>
 ![image](https://user-images.githubusercontent.com/31961588/166612680-976a55c6-058d-4070-b1ae-f065c942ed50.png)
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166612745-442691b0-7bbb-4a0e-8dee-a42405e4ed6b.png)
 
 
@@ -350,5 +374,7 @@ export class AppRoutingModule { }
 </details>
 
 #### 5.4 Cargando el listado del cliente
+
 <br>
+
 ![image](https://user-images.githubusercontent.com/31961588/166614790-35746e68-648c-48f2-8ee6-cd2b536a62c9.png)
