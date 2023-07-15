@@ -123,6 +123,19 @@ export class Factura {
 ![image](https://user-images.githubusercontent.com/31961588/168706744-52e67ee1-8acc-40c7-8d37-568b75dddec6.png)
 
 
+
+
+<br>
+
+**Se define los servicios que se van a llamar al back para modulo de factura**
+
+- **getFactura(id: number):** obetner una factura por su id
+- **delete(id: number):** eliminar factura por su id
+- **create(factura: Factura):** crear factura
+- **filtrarProductos(term: string):** filtrar productos por nombre
+
+![image](https://user-images.githubusercontent.com/31961588/168706822-b50f347d-d6f6-4088-9437-a976ff8b2d72.png)
+
 <details><summary>Mostrar código</summary>
 <p>
 
@@ -167,17 +180,6 @@ export class FacturaService {
 ```
 </p>
 </details>
-
-<br>
-
-**Se define los servicios que se van a llamar al back para modulo de factura**
-
-- **getFactura(id: number):** obetner una factura por su id
-- **delete(id: number):** eliminar factura por su id
-- **create(factura: Factura):** crear factura
-- **filtrarProductos(term: string):** filtrar productos por nombre
-
-![image](https://user-images.githubusercontent.com/31961588/168706822-b50f347d-d6f6-4088-9437-a976ff8b2d72.png)
 
 <br>
 <br>
