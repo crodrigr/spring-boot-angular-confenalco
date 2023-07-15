@@ -9,6 +9,24 @@ Crear el método delete en **cliente.service.ts**. Este método consume del **ap
 
 ![image](https://user-images.githubusercontent.com/31961588/167059473-2ecb6524-d6a4-483f-9058-890354d247ed.png)
 
+<details><summary>Mostrar código</summary>
+<p>
+ 
+```typescript
+delete(id: number): Observable<any>{
+  return this.http.delete<any>(`${this.urlApi}/clientes/${id}`).pipe(
+    catchError(e=>{
+       if(e.error.mensaje){
+         console.error(e.error.mensaje);
+       }
+       return throwError(()=>e);
+    })
+  );
+}
+```
+</p>
+</details>
+
 <br>
 <br>
 <br>
