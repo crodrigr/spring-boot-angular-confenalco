@@ -71,6 +71,28 @@ En **cliente.service.ts** se crea un método **update** cliente, el cual, comsum
 
 ![image](https://user-images.githubusercontent.com/31961588/167055487-067ab694-a453-44c7-956a-d347d1157d6f.png)
 
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+update(cliente: Cliente): Observable<Cliente>{
+  return this.http.put<Cliente>(`${this.urlApi}/cliente/${cliente.id}`,cliente).pipe(
+    catchError(e=>{
+      if(e.status==400){
+        return throwError(()=>e);
+      }
+      if(e.error.mensaje){
+        console.error(e.error.mensaje);
+      }
+      return throwError(()=>e);
+    })
+  );
+}
+```
+
+</p>
+</details>
+
 <br>
 <br>
 <br>
