@@ -197,8 +197,8 @@ En este apartado final, está el código de **form.componen.ts**, **form.compone
 ```typeScript
 
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from 'src/app/Cliente/cliente';
-import { Region }  from 'src/app/Cliente/region';
+import { Cliente } from '../cliente/cliente';
+import { Region }  from '../cliente/region';
 import { ClienteService} from 'src/app/Cliente/cliente.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
