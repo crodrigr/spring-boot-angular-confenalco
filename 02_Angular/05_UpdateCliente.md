@@ -154,6 +154,19 @@ En la tabla de cliente se tiene  un botón editar, este botón debe recibir el i
 
 ![image](https://user-images.githubusercontent.com/31961588/167057207-0b2b88e4-b4a1-4bae-9065-6937c4e30d9d.png)
 
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+
+<td><button type="button" [routerLink]="['/clientes/form',cliente.id]" class="btn btn-success" >Actualizar</button></td>
+
+```
+</p>
+</details>
+
+
 <br>
 
 
