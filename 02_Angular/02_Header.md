@@ -47,3 +47,10 @@ En el **index.html** colocamos los **scripts** de **boostrap** y de los icon.
 </p>
 </details>
 
+## 2. Estilos globales
+
+En el archivos **styles.css** se configura los estilos globales, es decir, acá se define los estilos que aplican para toda la aplicación. Cada **componente** tiene su propio archivo de **css**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/5e710b0b-2644-4e1b-a9d4-be19237807e2)
+
+
