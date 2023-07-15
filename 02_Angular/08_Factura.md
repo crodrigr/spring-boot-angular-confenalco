@@ -31,14 +31,20 @@ Crear el directorio para los componentes de modulo de factura
 
 ## 2. Modelos de facturas
 
+
 Se crea los modelos del módulo de facturas, el cual, debe ser un espejo al modelo que está definido en el backend
+
+<br>
 
 ### 2.1 Se crea el directorio models dentro de facturas. 
 
+<br>
 
 #### 2.1.1 Clase producto
 
 ![image](https://user-images.githubusercontent.com/31961588/168699078-b91944a5-4f73-4170-b2e6-b890d4a631ea.png)
+
+<br>
 
 <details><summary>Mostrar código</summary>
 <p>
