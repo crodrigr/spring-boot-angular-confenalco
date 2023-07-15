@@ -5,11 +5,15 @@ flowchart LR
     A[ComponentFactura]-->C[factura.component.ts]
     A-->D[factura.component.html]
     A-->E[factura.component.css]
-    F[cliente.service.ts]:::someclass-->A
-    classDef someclass fill:#f96
-    G[app.module.]:::someclass1-->A
+    A-->G[Models]
+    G-->H[Producto.ts]
+    G-->J[ItemFactura.ts]
+    G-->I[Factura.ts]
+    A-->M[Services]
+    M-->S[factura.servies.ts]
+    Z[app.module.]:::someclass1-->A
     classDef someclass1 fill:#33FF39
-    H[app-routing-module]:::someclass1-->A
+    X[app-routing-module]:::someclass1-->A
     classDef someclass1 fill:#33FF39 
 
 ```
