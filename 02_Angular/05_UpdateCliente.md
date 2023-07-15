@@ -68,7 +68,7 @@ En la tabla de cliente se tiene  un botón editar, este botón debe recibir el i
 
 ### 4.3 Obtener cliente en formulario
 
-Obtener un cliente al cargar un formulario desde el botón actulizar. 
+Obtener un cliente al cargar un formulario desde el botón actualizar. 
 
 ![image](https://user-images.githubusercontent.com/31961588/167057830-3c644bc7-320b-477a-af52-6d207e4ca0a7.png)
 
