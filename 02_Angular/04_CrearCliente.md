@@ -11,7 +11,7 @@ flowchart LR
 
 ```
 
-
+El formulario para crear un cliente es un componente **form**. Todo componente tiene tres archivos: **ts**,**css** y **html**. Por otra parte, se tiene un clase que nos proporciona los servicios **cliente.service.ts** para consumir los **api's** del **backend**.
 
 <br>
 
