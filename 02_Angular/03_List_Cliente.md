@@ -18,10 +18,7 @@ Se crea un directorio **cliente** dentro **src** para construir el componente cl
 
 
 
-<br>
-<br>
-<br>
-<br>
+
 
 ## 2. Componente cliente
 
