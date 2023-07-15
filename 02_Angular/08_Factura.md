@@ -14,7 +14,11 @@ flowchart LR
 
 ```
 
-## 1. Crear el directorio para los componentes de modulo de factura
+## 1. Componentes de modulo de factura
+
+Crear el directorio para los componentes de modulo de factura
+
+<br>
 
 ### 1.1 Directorio de facturas
 
