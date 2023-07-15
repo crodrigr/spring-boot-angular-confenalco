@@ -1,5 +1,8 @@
 # Actualizar cliente
 
+<br>
+<br>
+
 ## 1. GetCliente por Id en cliente.service.ts
 
 Es necesario tener un método que traiga la información del cliente desde el back para llenar el formulario con los datos del cliente y sobre ellos modificar los
