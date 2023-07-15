@@ -149,16 +149,19 @@ export class ClienteService {
 
 ## 5. Crear una table que muestre el listado de clientes
 
-### 5.1 cliente.component.ts
+#### 5.1 cliente.component.ts
 
 El cliente.component.ts se define la lógica del componente, en este caso, los métodos que vamos a usar para llamar al backend para traer todos los registros de nuestros clientes y mostrarlos en nuestra tabla de clientes. 
 
 ![image](https://user-images.githubusercontent.com/31961588/166611612-030a1146-efd5-4c32-b990-6d5162a4778e.png)
 
 
-**Código cliente.component.ts**
+<details><summary>Mostrar código</summary>
+<p>
 
-```TypeScript
+
+```typescript
+  
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from './cliente.service';
 import { Cliente } from './cliente';
@@ -188,7 +191,15 @@ export class ClienteComponent implements OnInit {
   }
 
 }
+
 ```
+
+</p>
+</details>
+
+
+
+
 
 ### 5.2 cliente.component.html
 
