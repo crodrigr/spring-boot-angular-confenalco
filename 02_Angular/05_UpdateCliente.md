@@ -103,6 +103,29 @@ En el **form.component.ts** se crea un método **update** cliente para que sea l
 
 ![image](https://user-images.githubusercontent.com/31961588/167056018-629c315d-a082-4993-b516-2afbe4e90ba2.png)
 
+<details><summary>Mostrar código</summary>
+<p>
+  
+```typescript
+
+update(): void{
+    this.clienteService.update(this.cliente).subscribe({
+      next:(cliente)=>{
+         this.router.navigate(['/clientes']);        
+      },
+      error:(err)=>{
+        this.errores=err.error.errors as string[];
+        console.error('Código del error desde el backend: ' + err.status);
+        console.error(err.error.errors);
+      }
+    });
+  }
+
+```
+</p>
+</details>
+
+
 <br>
 <br>
 <br>
