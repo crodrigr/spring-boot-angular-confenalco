@@ -70,7 +70,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 ## 3. Probar estilos
 
-Angular se basa en componentes, y el componente por defecto que tiene todo proyecto es el **app.componente**, entonces en el archivo **app.component.html** borramos todo y colocamos **<h1>Hola mundo</h1>** 
+Angular se basa en componentes, y el componente por defecto que tiene todo proyecto es el **app.componente**, entonces en el archivo **app.component.html** borramos todo y colocamos **Hola mundo** 
 
 #### 3.1 Hola mundo 
 
