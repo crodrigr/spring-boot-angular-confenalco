@@ -6,7 +6,7 @@ flowchart LR
     A[ComponentForm]-->C[form.component.ts]
     A-->D[form.component.html]
     A-->E[form.component.css]
-    F[cliente.service.ts]:::someclass-->A
+    C-->F[cliente.service.ts]:::someclass
     classDef someclass fill:#f96  
 
 ```
