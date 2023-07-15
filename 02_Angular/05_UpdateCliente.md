@@ -50,6 +50,8 @@ En el **form.component.ts** se crea un método **update** cliente para que sea l
 
 ## 4. Botón de editar cliente y path  
 
+En la tabla de cliente se tiene  un botón editar, este botón debe recibir el id del cliente y reenviar al formulario de cliente, el cual, carga los datos en el formulario. Por lo tanto, se debe agreagar una nueva path en **routing** y se debe ajustar el bótón en el html.
+
 ### 4.1 Configuración app-routing.module.ts
 
 ![image](https://user-images.githubusercontent.com/31961588/167056922-85916b46-6952-400f-afa3-7aa46c5209a9.png)
