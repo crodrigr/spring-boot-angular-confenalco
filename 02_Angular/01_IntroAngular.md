@@ -50,7 +50,12 @@ Angular tiene un servidor web embebido el cual se inia con el comando **ng serve
 
 #### 3.1 ng server
 
-Una vez se crea el proyecto debe ingresa por la terminal al directorio del proyecto creado y ejecutar el comando **ng serve**
+Una vez se crea el proyecto debe ingresa por la terminal al directorio del proyecto creado y ejecutar el comando **ng serve**. Después de iniciado el proyecto vaya al navegado al **http://localhost:4200** 
 
-![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/e1dd3a94-f911-4853-85fb-3763c1991798)
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/668acf28-04cb-4482-9e03-0c6ebb88e70b)
+
+#### 3.2 Bienvenida de angular
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/2760b390-1207-4028-a3fe-51b825d782fa)
+
+
 
