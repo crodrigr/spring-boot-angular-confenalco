@@ -8,7 +8,7 @@ Se crea un directorio **cliente** dentro **src** para construir el componente cl
 
 <br>
 <br>
-<br>
+
 
 ![image](https://user-images.githubusercontent.com/31961588/166582863-03158336-c664-42d2-be8e-75bfe80d3ebd.png)
 
