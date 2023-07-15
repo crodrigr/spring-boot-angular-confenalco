@@ -96,7 +96,7 @@ Se crea en el **cliente.service.ts** el método **create** que hace una petició
 
 <br>
 
-##### 1.3.5 Método create cliente en el form.component.ts
+**Método create cliente en el cliente.service** 
 
 ![image](https://user-images.githubusercontent.com/31961588/166979219-d41c5495-cdfe-4b10-b99c-12812c817aae.png)
 
