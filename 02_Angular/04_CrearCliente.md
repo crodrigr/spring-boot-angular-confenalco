@@ -8,7 +8,6 @@ En este apartado se va crear el **componente form**, para la creación y actuliz
 
 ![image](https://user-images.githubusercontent.com/31961588/167023791-455618b3-a761-41dc-9cda-badf03dd532d.png)
 
-
 #### 1.1 Crear componente form
 
 Se crea el componente form que va ser incluir el formulario para la creación y actulización de clientes.
@@ -16,17 +15,19 @@ Se crea el componente form que va ser incluir el formulario para la creación y 
 ![image](https://user-images.githubusercontent.com/31961588/166971616-971546c2-3023-4f2e-9680-408f3b9f85fa.png)
 
 
-#### 1.2 El componente form.component.ts importamos la librerias que se necesita para el create cliente
+#### 1.2 Librerias para form.component.ts importamos
+
+En **form.component.ts** se necesita las siguiente librerias para crear y actulizar un cliente en el formulario.
 
 ![image](https://user-images.githubusercontent.com/31961588/166972576-48537fa7-88e4-4c00-a329-e6c1918f8fa7.png)
 
-#### 1.3 Defininción de los atributos y constructor de la clase form.component.ts
+#### 1.3 Atributos y constructor clase form.component.ts
 
 ![image](https://user-images.githubusercontent.com/31961588/166973780-cc4c8a6e-a679-4a94-ab6d-65098cd3847d.png)
 
-### 1.3 Crear un método que nos traiga el listado de todas las regiones para seleccionar en el formulario de cliente
+### 1.3 Método listado de regiones 
 
-#### 1.3.1 Crear servicio getRegiones en el cliente.service.ts
+#### 1.3.1 Servicio getRegiones 
 
 **Importamos la interfaz region en cliente.service.ts**
 
