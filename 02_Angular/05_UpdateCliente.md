@@ -3,7 +3,7 @@
 <br>
 <br>
 
-## 1. GetCliente por Id en cliente.service.ts
+## 1. GetCliente por Id
 
 Es necesario tener un método que traiga la información del cliente desde el back para llenar el formulario con los datos del cliente y sobre ellos modificar los
 campos necesarios. Recuerde que se debe crear un servicio en **cliente.service.ts** que trae un **observable** y este método se va llamar desde el **form.component.ts**
@@ -26,7 +26,9 @@ Antes se declara el router para usarlo en el método getCliente, esto va permiti
 <br>
 <br>
 
-## 2. Update cliente en cliente.service.ts
+## 2. Update cliente 
+
+En **cliente.service.ts** se crea un método **update** cliente, el cual, comsume el **api** que actuliza el cliente en la base de dato. 
 
 <br>
 
@@ -36,8 +38,9 @@ Antes se declara el router para usarlo en el método getCliente, esto va permiti
 <br>
 <br>
 
-## 3. Update cliente en form.component.ts
+## 3. Update cliente form.component.ts
 
+En el **form.compoente.ts** se crea un méto **update** cliente para que sea llamado desde el botón guarda. 
 
 ![image](https://user-images.githubusercontent.com/31961588/167056018-629c315d-a082-4993-b516-2afbe4e90ba2.png)
 
