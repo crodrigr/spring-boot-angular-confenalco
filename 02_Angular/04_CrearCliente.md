@@ -135,6 +135,8 @@ En **cliente.component.html**
 
 </details>
 
+<br>
+
 #### 1.6 Configurar path en **app-routing.module.ts**
 
 ![image](https://user-images.githubusercontent.com/31961588/167031216-63895837-e2fb-4e9c-8e6f-200f87446a42.png)
