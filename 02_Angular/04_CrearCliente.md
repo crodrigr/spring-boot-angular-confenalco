@@ -8,12 +8,15 @@ En este apartado se va crear el **componente form**, para la creación y actuliz
 
 ![image](https://user-images.githubusercontent.com/31961588/167023791-455618b3-a761-41dc-9cda-badf03dd532d.png)
 
+<br>
+
 #### 1.1 Crear componente form
 
 Se crea el componente form que va tener el formulario para la creación y actulización de clientes.
 
 ![image](https://user-images.githubusercontent.com/31961588/166971616-971546c2-3023-4f2e-9680-408f3b9f85fa.png)
 
+<br>
 
 #### 1.2 Librerias para form.component.ts 
 
@@ -21,11 +24,17 @@ En **Form.component.ts** se necesita las siguiente librerias para crear y actuli
 
 ![image](https://user-images.githubusercontent.com/31961588/166972576-48537fa7-88e4-4c00-a329-e6c1918f8fa7.png)
 
+<br>
+
 #### 1.3 Atributos y constructor clase form.component.ts
 
 ![image](https://user-images.githubusercontent.com/31961588/166973780-cc4c8a6e-a679-4a94-ab6d-65098cd3847d.png)
 
+<br>
+
 #### 1.3 Método listado de regiones 
+
+<br>
 
 ##### 1.3.1 Servicio getRegiones 
 
@@ -74,6 +83,8 @@ que se carga el componente form.
 
 ![image](https://user-images.githubusercontent.com/31961588/166976252-7518cc50-d197-4400-b7eb-9036c10bee4a.png)
 
+<br>
+
 ### 1.3.4 Método crearCliente en el form.component.ts
 
 Se crea en el cliente.service.ts el método create que hace una petición post al back pasandole el objeto cliente. Se importa map,catchError , y tap
@@ -90,12 +101,15 @@ En el **form.component.ts**
 
 ![image](https://user-images.githubusercontent.com/31961588/167016136-4d7b99b1-affb-4e73-aad2-4f1924eb5927.png)
 
+<br>
+
 ## 1.4 Formulario html crear cliente
 
 ![image](https://user-images.githubusercontent.com/31961588/167025560-27827ddb-5b64-4681-812d-8bb84c57cf08.png)
 
 ![image](https://user-images.githubusercontent.com/31961588/167052942-3d66395e-1e76-4be4-9792-e897fe9f8bb0.png)
 
+<br>
 
 ## 1.5 Colocar botón crear en la tabla clientes
 
@@ -130,6 +144,9 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 ```
+<br>
+<br>
+<br>
 
 # 2 Código final de form.component.ts, form.componente.html cliente.service.ts
 
@@ -191,6 +208,7 @@ export class FormComponent implements OnInit {
 }
 
 ```
+<br>
 
 ### 2.2 form.componente.html
 ```Html
@@ -254,6 +272,7 @@ export class FormComponent implements OnInit {
   
 
 ```
+<br>
 
 ### 2.3 cliente.service.ts
 ```TypeScript
