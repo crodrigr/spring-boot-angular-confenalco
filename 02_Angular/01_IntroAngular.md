@@ -19,3 +19,22 @@ Aquí están algunas características y conceptos clave de Angular:
    7. **Pruebas:** Angular cuenta con un sólido soporte para pruebas unitarias y pruebas de extremo a extremo. Proporciona utilidades y herramientas para escribir pruebas para componentes, servicios y otras partes de la aplicación, lo que facilita garantizar la calidad y confiabilidad del código.
 
 Angular tiene una comunidad grande y activa, lo que significa que hay muchos recursos, tutoriales y bibliotecas de terceros disponibles para ayudar a los desarrolladores a construir aplicaciones Angular de manera eficiente. Es ampliamente utilizado en la industria y ha sido adoptado por muchas empresas para desarrollar aplicaciones empresariales a gran escala.
+
+## 1. Ambiente de desarrallo
+
+Para trabajar con angular se debe tener las siguientes herramientas:
+
+  -  Visual Studio Code
+  -  Git
+  -  Nodejs
+        - npm
+  -  angular/cli
+
+#### 1.1 Validar ambiente
+
+Verificar que tenga todas al herramientas
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/224fa6fc-84a0-4915-a570-b543077005bd)
+
+
+
