@@ -142,24 +142,30 @@ Se busca un ejemplo de un nav bar en boostrap y lo copiamos
   </div>
 </nav>
 ```
-```
-
 </p>
 </details>
 
 
-## 6 app.component htlm usamos el componente header creado a través del selector <app-header>
+## 6 Implentar el header
+
+En **app.componente.html** se hace la implementación del componente **header** a través del **selector**
   
   ![image](https://user-images.githubusercontent.com/31961588/164360228-0f8961fc-d3bd-46ec-8a9b-0874d2480999.png)
 
   ![image](https://user-images.githubusercontent.com/31961588/164360297-e3130834-7a91-4f9a-8dbc-e651988c5bf4.png)
 
-**Código**
-  
- ```Typescript
+<details><summary>Mostrar código</summary>
+<p>
+
+
+```Typescript
   <app-header></app-header>
 <div class="container">
   <router-outlet></router-outlet>
 </div>
 ```
+
+</p>
+</details>
+
 
