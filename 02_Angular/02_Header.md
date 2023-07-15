@@ -56,7 +56,7 @@ En el archivos **styles.css** se configura los estilos globales, es decir, acá 
 <details><summary>Mostrar código</summary>
 <p>
 
-**Styles.css***
+**Styles.css**
 
 ```css
   /* You can add global styles to this file, and also import other style files */
