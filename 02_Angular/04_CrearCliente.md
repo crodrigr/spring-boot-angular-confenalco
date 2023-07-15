@@ -10,7 +10,7 @@ En este apartado se va crear el **componente form**, para la creación y actuliz
 
 #### 1.1 Crear componente form
 
-Se crea el componente form que va ser incluir el formulario para la creación y actulización de clientes.
+Se crea el componente form que va tener el formulario para la creación y actulización de clientes.
 
 ![image](https://user-images.githubusercontent.com/31961588/166971616-971546c2-3023-4f2e-9680-408f3b9f85fa.png)
 
