@@ -62,6 +62,17 @@ delete(cliente: Cliente): void{
 
 ![image](https://user-images.githubusercontent.com/31961588/167059924-02aa9241-c6a4-472b-bf59-8bf1c1c53ef1.png)
 
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+
+<td><button type="button" (click)='delete(cliente)' class="btn btn-danger" >Elminar</button></td>
+
+```
+</p>
+</details>
+
 <br>
 <br>
 <br>
