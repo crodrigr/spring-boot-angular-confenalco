@@ -1,5 +1,16 @@
 # Elminar cliente
 
+```mermaid
+flowchart LR   
+    Z[ClienteComponent]-->B[cliente.componente.ts]
+    Z-->C[cliente.componente.html]
+    Z-->D[cliente.componente.css]
+    F[cliente.service.ts]:::someclass-->Z
+    classDef someclass fill:#f96
+```
+ 
+
+
 <br>
 <br>
 
