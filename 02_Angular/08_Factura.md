@@ -98,7 +98,7 @@ export class ItemFactura {
 
 ```TypeScript
 import { ItemFactura } from './item-factura';
-import { Cliente } from '../../Cliente/cliente';
+import { Cliente } from '../../cliente/cliente';
 
 export class Factura {
   id: number;
