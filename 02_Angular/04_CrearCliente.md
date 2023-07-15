@@ -116,7 +116,7 @@ Se crea en el **cliente.service.ts** el método **create** que hace una petició
 
 <br>
 
-## 1.5 Colocar botón crear en la tabla clientes
+## 1.5 Botón crear en la tabla clientes
 
 En **cliente.component.html**
 
