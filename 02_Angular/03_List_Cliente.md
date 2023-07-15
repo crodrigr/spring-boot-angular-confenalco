@@ -201,7 +201,7 @@ export class ClienteComponent implements OnInit {
 
 
 
-### 5.2 cliente.component.html
+#### 5.2 cliente.component.html
 
 ![image](https://user-images.githubusercontent.com/31961588/166612680-976a55c6-058d-4070-b1ae-f065c942ed50.png)
 
@@ -254,14 +254,16 @@ export class ClienteComponent implements OnInit {
 
 ```
 
-### 5.3 Configurar routing y app.module
+#### 5.3 Configurar routing y app.module
 
 ![image](https://user-images.githubusercontent.com/31961588/166614536-0468932a-998f-4824-8834-a6c9897b6603.png)
 
-**Código app.module.ts**
+<details><summary>Mostrar código app.module</summary>
+<p>
 
-```TypeScript
-import { NgModule } from '@angular/core';
+
+```typescript
+ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -269,7 +271,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ClienteComponent } from './Cliente/cliente.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 @NgModule({
   declarations: [
@@ -288,19 +290,27 @@ import { ClienteComponent } from './Cliente/cliente.component';
 export class AppModule { }
 ```
 
+</p>
+</details>
+
+
+
 
 ![image](https://user-images.githubusercontent.com/31961588/166614577-313848e4-3b2f-4bdb-ab42-db3235a8d715.png)
 
-**Código del app-routing.module.ts**
+<details><summary>Mostrar código app-routing.module.ts</summary>
+<p>
+
+
 
 ```TypeScript
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClienteComponent } from './Cliente/cliente.component';
+import { ClienteComponent} from '../app/cliente/cliente.component'
 
 const routes: Routes = [ 
-   { path: 'clientes', component: ClienteComponent }
-   ];
+  { path: 'clientes', component: ClienteComponent }
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
@@ -308,6 +318,9 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 ```
+
+</p>
+</details>
 
 **Cargando el listado del cliente**
 
