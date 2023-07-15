@@ -38,6 +38,21 @@ delete(id: number): Observable<any>{
 
 ![image](https://user-images.githubusercontent.com/31961588/167059864-4ec8dc51-5f88-40d0-9672-ce40d0a34579.png)
 
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+delete(cliente: Cliente): void{
+    this.clienteService.delete(cliente.id).subscribe({
+      next: ()=>{
+        this.clientes = this.clientes.filter(cli=>cli!==cliente)
+      }
+    }) 
+
+```
+</p>
+</details>
+
 <br>
 <br>
 <br>
