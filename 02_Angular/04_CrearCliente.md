@@ -108,7 +108,7 @@ Se crea en el **cliente.service.ts** el método **create** que hace una petició
 
 <br>
 
-## 1.4 Formulario html crear cliente
+#### 1.4 Formulario html crear cliente
 
 ![image](https://user-images.githubusercontent.com/31961588/167025560-27827ddb-5b64-4681-812d-8bb84c57cf08.png)
 
@@ -116,7 +116,7 @@ Se crea en el **cliente.service.ts** el método **create** que hace una petició
 
 <br>
 
-##### 1.5 Botón crear en la tabla clientes
+#### 1.5 Botón crear en la tabla clientes
 
 En **cliente.component.html**
 
