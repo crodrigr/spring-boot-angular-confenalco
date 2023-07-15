@@ -87,15 +87,16 @@ En el componente **form**, se define un método que consume el servició anterio
 
 <br>
 
-##### 1.3.4 Método crearCliente en el form.component.ts
+##### 1.3.4 Método crearCliente  cliente.service 
 
-Se crea en el cliente.service.ts el método create que hace una petición post al back pasandole el objeto cliente. Se importa map,catchError , y tap
+Se crea en el **cliente.service.ts** el método **create** que hace una petición post al back pasandole el objeto **cliente**. Se importa map,catchError , y tap
 
 
 ![image](https://user-images.githubusercontent.com/31961588/166978585-50de134c-4fb8-49e2-9bfe-f7f428572b9c.png)
 
+<br>
 
-Método create cliente en el form.component.ts
+##### 1.3.5 Método create cliente en el form.component.ts
 
 ![image](https://user-images.githubusercontent.com/31961588/166979219-d41c5495-cdfe-4b10-b99c-12812c817aae.png)
 
