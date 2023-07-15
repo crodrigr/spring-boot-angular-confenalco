@@ -207,10 +207,13 @@ export class ClienteComponent implements OnInit {
 
 ![image](https://user-images.githubusercontent.com/31961588/166612745-442691b0-7bbb-4a0e-8dee-a42405e4ed6b.png)
 
-**Código cliente.componente.html**
 
-```Html
-<div class="card border-primary mb3">
+<details><summary>Mostrar código cliente.componente.html</summary>
+<p>
+
+
+```html
+  <div class="card border-primary mb3">
     <div class="card-header">Clientes</div>
     <div class="card-body text-primary">
        <h5 class="card-title">Listado de clientes</h5>
@@ -250,9 +253,15 @@ export class ClienteComponent implements OnInit {
       
     </div>
     </div>
-    
-
 ```
+
+</p>
+</details>
+
+
+
+
+
 
 #### 5.3 Configurar routing y app.module
 
