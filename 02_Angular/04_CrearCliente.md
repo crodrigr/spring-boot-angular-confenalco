@@ -25,9 +25,9 @@ En **form.component.ts** se necesita las siguiente librerias para crear y actuli
 
 ![image](https://user-images.githubusercontent.com/31961588/166973780-cc4c8a6e-a679-4a94-ab6d-65098cd3847d.png)
 
-### 1.3 Método listado de regiones 
+#### 1.3 Método listado de regiones 
 
-#### 1.3.1 Servicio getRegiones 
+##### 1.3.1 Servicio getRegiones 
 
 **Importamos la interfaz region en cliente.service.ts**
 
