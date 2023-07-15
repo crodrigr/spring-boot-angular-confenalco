@@ -19,7 +19,7 @@ En el **index.html** colocamos los **scripts** de **boostrap** y de los icon.
 <details><summary>Mostrar código</summary>
 <p>
 
-#### Codigo de index.html
+##### 1.2.1 Codigo de index.html
 
 ```html
 <!doctype html>
