@@ -149,9 +149,11 @@ Se busca un ejemplo de un nav bar en boostrap y lo copiamos
 ## 6 Implentar el header
 
 En **app.componente.html** se hace la implementación del componente **header** a través del **selector**
-  
+
+#### 6.1 Implementando nav bar en el header
   ![image](https://user-images.githubusercontent.com/31961588/164360228-0f8961fc-d3bd-46ec-8a9b-0874d2480999.png)
 
+#### 6.2 Visualizando nav bar
   ![image](https://user-images.githubusercontent.com/31961588/164360297-e3130834-7a91-4f9a-8dbc-e651988c5bf4.png)
 
 <details><summary>Mostrar código</summary>
