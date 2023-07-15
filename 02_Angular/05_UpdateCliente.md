@@ -16,11 +16,48 @@ Antes se declara el router para usarlo en el método getCliente, esto va permiti
 
 ![image](https://user-images.githubusercontent.com/31961588/167054250-5f66079f-073e-4c6e-a9ce-a797799ee9ab.png)
 
+<details><summary>Mostrar código</summary>
+<p>
+  
+```typescript
+   import { Router } from '@angular/router';
+
+   constructor(private http: HttpClient,
+              private router: Router){
+     this.urlApi = environment.apiUrl+'/api';
+   }
+
+   
+```
+</p>
+</details>
+
 <br>
 
 #### 1.2 Método getCliente.
 
 ![image](https://user-images.githubusercontent.com/31961588/167054156-536f0f32-75fe-4bf0-9610-4d4d3d183901.png)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescrit
+getCliente(id: number): Observable<Cliente>{    
+    return this.http.get<Cliente>(`${this.urlApi}/cliente/${id}`).pipe(
+      catchError(e=>{
+        if(e.status!=401 && e.erro.mensaje){
+          this.router.navigate(['/clientes']);
+          console.log(e.error.mensaje);
+        }
+        return throwError(()=>e);
+      })
+    );
+ }
+```
+
+
+</p>
+</details>
 
 <br>
 <br>
@@ -55,6 +92,15 @@ En la tabla de cliente se tiene  un botón editar, este botón debe recibir el i
 ### 4.1 Configuración app-routing.module.ts
 
 ![image](https://user-images.githubusercontent.com/31961588/167056922-85916b46-6952-400f-afa3-7aa46c5209a9.png)
+
+<details><summary>Mostrar código</summary>
+<p>
+  
+```typescript
+ { path: 'clientes/form/:id', component: FormComponent},
+```
+</p>
+</details>
 
 <br>
 
