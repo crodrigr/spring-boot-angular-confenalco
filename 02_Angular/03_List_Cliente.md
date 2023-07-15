@@ -17,7 +17,9 @@ Con el comando **ng g component cliente --flat** se crea el componente de client
 Archivos que se crearon
 
 ![image](https://user-images.githubusercontent.com/31961588/166586927-dde0ca3b-eb55-4bc7-8b5a-7904c96c4d4a.png)
-
+<br>
+<br>
+<br>
 ## 3. Modelos de cliente. 
 
 En la parte del front vamos necesitar crear el tipo de dato clientes y regiones. Hay dos maneras: clase o interfaz. Se usa clase cuando vayamos a instanciar objetos a traves del operador new, e interfaz en caso contrario. En nuestro caso lo vamos hacer con interfaz por que tomamos la data desde el back. 
