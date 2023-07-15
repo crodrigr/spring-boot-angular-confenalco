@@ -86,13 +86,13 @@ Se observa que tiene decorador **@Injectable**, por lo tanto, usa inyección de 
 
 ![image](https://user-images.githubusercontent.com/31961588/166608638-0c88ae2a-e3ee-423b-873f-0a3ead5e1666.png)
 
-### 4.1 Configuración path del back del Enviroment 
+#### 4.1 Configuración path del back del Enviroment 
 
 Esta es una variable de entorno vamos a configurar con la path del backend. 
 
 ![image](https://user-images.githubusercontent.com/31961588/166608812-77c55f5f-91a0-483e-bd16-5cc6b51d005d.png)
 
-## 4.2 HttpClient
+#### 4.2 HttpClient
 
 El httpClient me permite hacer peticiones http: get, post, delete, push, en este caso se van hacer a nuestro backend. 
 
@@ -101,12 +101,12 @@ El httpClient me permite hacer peticiones http: get, post, delete, push, en este
 
 HttpRequest,HttpEvent y HttpHeaders se importa para el manejo de los headers y request. 
 
-## 4.3 Definimos el metodo constructor
+#### 4.3 Definimos el metodo constructor
 
 ![image](https://user-images.githubusercontent.com/31961588/166609660-31539a53-266e-4eaa-8a03-f2bbc8aa1516.png)
 
 
-## 4.4 Método getClientes
+#### 4.4 Método getClientes
 
 Definimos el metodo getClientes, el cual, va hacer una petición get al back para traer todos los clientes que tenemos registrados en nuestra base de datos. 
 
