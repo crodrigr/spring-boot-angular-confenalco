@@ -47,8 +47,9 @@ Se crea los modelos del módulo de facturas, el cual, debe ser un espejo al mode
 <br>
 
 <details><summary>Mostrar código</summary>
-<p style="background:blue;">
 
+<p>   
+    
 ```TypeScript
 export class Producto {
     id: number;
