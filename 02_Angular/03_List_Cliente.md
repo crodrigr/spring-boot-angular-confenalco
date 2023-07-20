@@ -134,6 +134,15 @@ El httpClient me permite hacer peticiones http: get, post, delete, push, en este
 
 HttpRequest,HttpEvent y HttpHeaders se importa para el manejo de los headers y request. 
 
+**App.module.ts**
+
+Se debe agregar en **HttpClientModule** en **app.module.ts** para que se pueda usar el **HttpClient** en el service.
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9a658197-3b2e-41c9-ba6f-c2156cf196c7)
+
+
+<br>
+
 #### 4.3 Definimos el metodo constructor
 
 <br>
