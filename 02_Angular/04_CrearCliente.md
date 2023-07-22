@@ -55,7 +55,7 @@ En **Form.component.ts** se necesita las siguiente librerias para crear y actual
 
 ##### 1.3.1 Servicio getRegiones 
 
-La interfaz region en **cliente.service.ts** se debe importar, ya que ahí se va construir un servicio que proporcion el listado de regiones
+La interfaz region en **cliente.service.ts** se debe importar, ya que ahí se va construir un servicio que proporciona el listado de regiones
 
 ![image](https://user-images.githubusercontent.com/31961588/166974654-6ae4b98b-f6bb-4df0-a4a6-f863616df33b.png)
 
@@ -95,8 +95,7 @@ Definimos el método **getRegiones** en  **cliente.service.ts**, dicho servicio 
 
 ##### 1.3.2 Método getRegiones en el form.component.ts
 
-En el componente del form, definimos un metodo que, traiga el back todas la regiones y las guardes en la lista regiones, este método se debe ejecutar cada vez 
-que se carga el componente form.
+En el componente del form, definimos un metodo que, traiga el back todas la regiones y las guarde en la lista regiones, este método se debe ejecutar cada vez que se carga el componente form.
 
 En el componente **form**, se define un método que consume el servició anteriormente creado que traer del **api** la lista de regiones. Este método se debe ejecutar cada vez que termina de carga el componente, especificamente en el método **OnInit()** del ciclo de vida de **Angular**
 
