@@ -184,7 +184,40 @@ export class AppRoutingModule { }
 <br>
 <br>
 
-# 2 Código final
+
+
+# 2 DatePicker
+
+Usar un componte de datePicker de **angular/material** para el formulario de cliente para la fecha.  
+
+### 2.1 Instalación 
+
+Se debe hacer la instalación de **@angular/material** con el siguiente comando
+
+```cmd
+
+ng add @angular/material
+
+```
+
+### 2.2 Importar componetes
+
+En el **app.module** se importa las librerias del **datePicker**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/40e46407-3ec6-49f0-812c-5e0657cd4e06)
+
+### 2.3 Input datePicker
+
+En en el **form.componet.ts** se implenta el **datePicker** de angular/material
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/bc3cb85b-6712-4a36-8ef7-6539a8cbd1b2)
+
+
+<br>
+<br>
+<br>
+
+# 3 Código final
 
 En este apartado final, está el código de **form.componen.ts**, **form.componente.html**, **cliente.service.ts**, los cuales le podrán ser de mucha útilidad.
 
@@ -229,18 +262,28 @@ export class FormComponent implements OnInit {
     )
   }
 
-  create(): void{
+ create(): void {
     this.clienteService.create(this.cliente).subscribe({
-       next: (cliente: Cliente)=>{
-          this.router.navigate(['/clientes']);          
-       },
-       error: (err)=>{
-        this.errores = err.error.errors as string[];
+      next: (cliente: Cliente) => {
+        this.router.navigate(['/clientes']);
+      },
+      error: (err) => {
+        this.errores=[];
+        if(err.error.errors){
+          this.errores = err.error.errors as string[];
+        }else if(err.error.error){
+          this.errores.push(err.error.mensaje);
+          console.error(err.error.error); 
+
+        }       
         console.error('Código del error desde el backend: ' + err.status);
-        console.error(err.error.errors);  
-       } 
-    });    
+        
+      }
+    });
   }
+
+
+
   compararRegion(o1: Region, o2: Region): boolean {
     if (o1 === undefined && o2 === undefined) {
       return true;
@@ -265,6 +308,7 @@ export class FormComponent implements OnInit {
 <p>
   
 ```html
+
 <ul class="alert alert-danger" *ngIf="errores.length > 0">
     <li *ngFor="let err of errores">
       {{ err }}
@@ -277,32 +321,39 @@ export class FormComponent implements OnInit {
         <div class="form-group row">
           <label for="nombre" class="col-form-label colm-sm-2">Nombre</label>
            <div class="col-sm-6">            
-               <input type="text" class="form-control" [(ngModel)]="cliente.nombre" id="nombre" name="nombre" style="display:inline; width:300px;" required>
+               <input type="text" class="form-control" [(ngModel)]="cliente.nombre" id="nombre" name="nombre"  required style="width: 500px;">
             </div>
         </div>
         <div class="form-group row">
           <label for="apellido" class="col-form-label colm-sm-2">Apellido</label>
            <div class="col-sm-6"> 
-             <input type="text" class="form-control" [(ngModel)]="cliente.apellido" name="apellido" style="display:inline; width:300px;" required>            
+             <input type="text" class="form-control" [(ngModel)]="cliente.apellido" name="apellido"  required style="width: 500px;">            
            </div>
         </div>     
         <div class="form-group row">
           <label for="email" class="col-form-label colm-sm-2">Email</label>
            <div class="col-sm-6">            
-            <input type="email" class="form-control" [(ngModel)]="cliente.email" name="email" style="display:inline; width:300px;" required>          
+            <input type="email" class="form-control" [(ngModel)]="cliente.email" name="email"  required style="width: 500px;">          
            </div>
         </div>
+
         <div class="form-group row">
           <label for="createAt" class="col-form-label colm-sm-2">Fecha</label>
-           <div class="col-sm-6">            
-               <input type="date" class="form-control" [(ngModel)]="cliente.createAt" name="createAt" style="display:inline; width:300px;">
-           </div>
-        </div>
+           <div class="col-sm-6">   
+            <input [matDatepicker]="miDatepicker" class="form-control" [(ngModel)]="cliente.createAt" name="createAt"  style="display:inline; width:200px;" required>
+            <mat-datepicker-toggle matSuffix [for]="miDatepicker"  matDatepickerTogglePosition="end"></mat-datepicker-toggle>            
+            <mat-datepicker #miDatepicker></mat-datepicker> 
+          </div>
+        </div>    
+        
+       
+        
+        
   
         <div class="form-group row">
           <label for="region" class="col-form-label colm-sm-2">Región</label>
            <div class="col-sm-6">            
-               <select [compareWith]="compararRegion" class="form-control" [(ngModel)]="cliente.region" name="region" style="width: 300px;">
+               <select [compareWith]="compararRegion" class="form-control" [(ngModel)]="cliente.region" name="region" style="width: 500px;">
                  <option [ngValue]="undefined">---Seleccionar una región----</option>
                  <option *ngFor="let region of regiones" [ngValue]="region">{{region.nombre}}</option>              
                </select>
@@ -320,6 +371,8 @@ export class FormComponent implements OnInit {
   
      </div>  
   </div>
+
+
 
 ```
 </p>
