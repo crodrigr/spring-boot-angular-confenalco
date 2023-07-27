@@ -205,7 +205,7 @@ export class FacturaService {
 <br>
 <br>
 
-## 4  Factura componente 
+## 4  Facturas component.ts 
 
 Se crea el componente **factura** dentro del directorio de factura. Esto se hace a través del comando **ng g c facturas --flat**
 
@@ -416,6 +416,18 @@ Se crea le métododo de **elimiar** en el componente de **facturas.component.ts*
 </details>
 
 
+<br>
+<br>
+<br>
+
+## 5  Facturas component.html
+
+<br>
+
+Ahora se va construir el html donde se var redenrizar los datos de la factura para su creación. 
+
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/5984a0ce-8119-49a4-ad81-99f813040d83)
 
 
 
