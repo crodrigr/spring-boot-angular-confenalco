@@ -458,6 +458,30 @@ Se crea los métodos: **eliminar factura** y **actualizar cantidad**
 </p>
 </details>
 
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/aafa02c3-60c3-4303-b877-1443068f930f)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+  ngOnInit() {
+  
+    this.activatedRoute.paramMap.subscribe(params => {
+      let clienteId = +params.get('clienteId');
+      this.clienteService.getCliente(clienteId).subscribe(cliente => this.factura.cliente = cliente);
+    });
+
+    this.productosFiltrados = this.autocompleteControl.valueChanges
+      .pipe(
+        map(value => typeof value === 'string' ? value : value.nombre),
+        mergeMap(value => value ? this._filter(value) : [])
+      );
+  }
+
+```
+
+</p>
+</details>
 
 
 <br>
