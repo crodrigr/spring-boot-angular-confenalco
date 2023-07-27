@@ -117,7 +117,8 @@ update(cliente: Cliente): Observable<Cliente>{
 
 En el **form.component.ts** se crea un método **update** cliente para que sea llamado desde el botón guarda. 
 
-![image](https://user-images.githubusercontent.com/31961588/167056018-629c315d-a082-4993-b516-2afbe4e90ba2.png)
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/29459768-6392-42d4-b9e8-155ee3cb7bd4)
 
 <details><summary>Mostrar código</summary>
 <p>
