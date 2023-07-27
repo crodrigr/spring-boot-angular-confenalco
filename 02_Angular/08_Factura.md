@@ -434,7 +434,32 @@ Ahora se va construir el html donde se var redenrizar los datos de la factura pa
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/87715ee5-8455-4cde-aac8-4aa2ee14898e)
 
+<details><summary>Mostrar código</summary>
+<p>
+
+```html
+
+
+<div class="card bg-light">
+    <div class="card-header">{{titulo}}: {{factura.descripcion}}</div>
+    <div class="card-body">
+      <h4 class="card-title">
+        <a [routerLink]="['/clientes']" class="btn btn-light btn-xs">&laquo; volver</a>
+      </h4>
+  
+
+    </div>
+  </div>
+
+
+
+``
+
+</p>
+</details>
+
 <br>
+
 
 ### 5.2 Formulario
 
