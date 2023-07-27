@@ -2,6 +2,8 @@
 
 [Api fuentes](https://github.com/crodrigr/spring-boot-angular-confenalco-code/tree/master)
 
+[Comprehensive Markdown Crash Course](https://www.youtube.com/watch?v=FEa2diI2qgA)
+
 ## Objetivos:
 
 - Comprender los conceptos fundamentales de Angular y Spring.
