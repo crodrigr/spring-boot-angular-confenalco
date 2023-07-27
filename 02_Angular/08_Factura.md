@@ -215,6 +215,11 @@ Se crea el componente **factura** dentro del directorio de factura. Esto se hace
 
 Se importa las librerias a usar en el componente de **facturas**
 
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/8e7ee2f8-6a88-443c-b017-da3ad21af32c)
+
+<details><summary>Mostrar código</summary>
+<p>
+
 ```typescript
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
@@ -228,3 +233,6 @@ import { ItemFactura } from './models/item-factura';
 import swal from 'sweetalert2';
 
 ``
+
+</p>
+</details>
