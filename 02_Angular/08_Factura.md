@@ -125,6 +125,8 @@ export class Factura {
 </details>
 
 <br>
+<br>
+<br>
 
 ## 3  Directorio service
 
@@ -202,4 +204,10 @@ export class FacturaService {
 <br>
 <br>
 <br>
+
+## 4  Factura componente 
+
+Se crea el componente **factura** dentro del directorio de factura. Esto se hace a través del comando **ng g c facturas --flat**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/494feb31-cb21-4ad1-8459-300a3b851bc6)
 
