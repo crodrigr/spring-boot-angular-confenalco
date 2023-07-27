@@ -522,9 +522,23 @@ export class AppModule { }
 
 <br>
 
-##### 5.4.2 
+##### 5.4.2 Filtrado
 
-![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/82076f33-b365-425e-9650-42d07b69430a)
+
+1. En el método `ngOnInit()`, se suscribe a los cambios del control de autocompletado (`autocompleteControl.valueChanges`) utilizando el operador `pipe()`.
+
+2. Luego, se aplica el operador `map()` para transformar los valores emitidos por el control de autocompletado. Si el valor es de tipo `string`, se toma tal cual. De lo contrario, si es un objeto con la propiedad `nombre`, se toma el valor de esa propiedad.
+
+3. A continuación, se utiliza el operador `mergeMap()` para realizar una consulta asincrónica basada en el valor filtrado. Si hay un valor presente (no vacío), se llama al método privado `_filter()` con el valor filtrado. De lo contrario, se emite una matriz vacía.
+
+4. El método privado `_filter()` toma el valor filtrado como entrada y lo convierte en minúsculas. Luego, llama al servicio `facturaService.filtrarProductos(filterValue)` para obtener una lista de productos que coincidan con el valor filtrado. El resultado de esta llamada es una `Observable<Producto[]>`.
+
+En resumen, el código implementa una funcionalidad de autocompletado para filtrar productos en función de los valores ingresados en el control de autocompletado. Cada vez que el usuario escribe o selecciona algo en el control de autocompletado, se emite el valor y se realiza una búsqueda asincrónica para obtener los productos que coincidan con el valor ingresado.
+
+Recuerda que este código debe estar dentro de un componente de Angular y que el componente debe tener el import correspondiente para `Observable` y `map` desde RxJS, así como el servicio `facturaService` que proporciona el método `filtrarProductos()` para obtener los productos filtrados.
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/084f9e57-8166-4b84-9082-2912a913e6d1)
+
 
 
 <details><summary>Mostrar código</summary>
