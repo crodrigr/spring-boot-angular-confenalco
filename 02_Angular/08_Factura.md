@@ -361,6 +361,7 @@ Con `FormControl`, tienes un mayor control sobre la lógica y la interacción en
 </p>
 </details>
 
+<br>
 
 ### 4.5 Crear factura
 
@@ -373,29 +374,25 @@ Con `FormControl`, tienes un mayor control sobre la lógica y la interacción en
 
 ```typescript
 
+ create(facturaForm): void {
+    console.log(this.factura);
+    if (this.factura.items.length == 0) {
+      this.autocompleteControl.setErrors({ 'invalid': true });
+    }
 
-
-```
-
-</p>
-</details>
-
-
-![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/7f9c26a0-28c9-4cc5-9c57-03fb62cd6603)
-
-
-
-<details><summary>Mostrar código</summary>
-<p>
-
-```typescript
-
-
+    if (facturaForm.form.valid && this.factura.items.length > 0) {
+      this.facturaService.create(this.factura).subscribe(factura => {
+        swal.fire(this.titulo, `Factura ${factura.descripcion} creada con éxito!`, 'success');
+        this.router.navigate(['/clientes']);
+      });
+    }
+  }
 
 ```
 
 </p>
 </details>
+
 
 
 
