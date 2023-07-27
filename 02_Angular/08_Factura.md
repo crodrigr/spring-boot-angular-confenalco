@@ -415,6 +415,50 @@ Se crea le métododo de **elimiar** en el componente de **facturas.component.ts*
 </p>
 </details>
 
+<br>
+
+### 4.6 Otros métodos
+
+Se crea los métodos: **eliminar factura** y **actualizar cantidad**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/0c4737a1-31b4-434c-89f4-2e307d880b7a)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+
+ actualizarCantidad(id: number, event: any): void {
+    let cantidad: number = event.target.value as number;
+
+    if (cantidad == 0) {
+      return this.eliminarItemFactura(id);
+    }
+
+    this.factura.items = this.factura.items.map((item: ItemFactura) => {
+      if (id === item.producto.id) {
+        item.cantidad = cantidad;
+      }
+      return item;
+    });
+  }
+
+  
+
+  eliminarItemFactura(id: number): void {
+    this.factura.items = this.factura.items.filter((item: ItemFactura) => id !== item.producto.id);
+  }
+
+
+
+
+
+```
+
+</p>
+</details>
+
+
 
 <br>
 <br>
