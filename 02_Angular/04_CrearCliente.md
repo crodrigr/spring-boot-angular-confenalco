@@ -212,6 +212,24 @@ En en el **form.componet.ts** se implenta el **datePicker** de angular/material
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/bc3cb85b-6712-4a36-8ef7-6539a8cbd1b2)
 
+### 2.4 DatePicker - moment
+
+La fecha no la esta mostrando correctamente en el formulario, a pesar que se esta guardando correctamente en la base de datos. Para dar solución a esto se va ha utilizar el **moment-adapter** con el siguiente comandos
+
+```cmd
+
+npm install --save @angular/material-moment-adapter
+
+npm install --save moment
+
+```
+
+Se ajusta el **app.modulo.ts** se cambia el **MatNativeDateModule** por **MatMomentDateModule**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/00a402f6-3fd3-4a2d-9085-1546199fa2d7)
+
+
+
 
 <br>
 <br>
