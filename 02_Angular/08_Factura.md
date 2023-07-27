@@ -796,4 +796,42 @@ La lista de los items, es decir, de los productos seleccionados en la factura
 </p>
 </details>
 
+### 5.7 Configuración ruta
+
+Se adiciona un path en el **app-routing.module.ts**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/893e115c-c250-4943-bbf9-df08f1a2dede)
+
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```html
+
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ClienteComponent} from '../app/cliente/cliente.component'
+import { FormComponent } from './cliente/form.component';
+import { FacturasComponent} from './factura/facturas.component'
+
+const routes: Routes = [ 
+   { path: 'clientes', component: ClienteComponent },
+   {path: 'clientes/form', component: FormComponent},
+   { path: 'clientes/form/:id', component: FormComponent},
+   { path: 'facturas/form/:clienteId', component: FacturasComponent},
+  ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+
+
+```
+
+</p>
+</details>
+
 
