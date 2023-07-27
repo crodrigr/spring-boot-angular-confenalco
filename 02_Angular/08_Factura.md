@@ -522,8 +522,9 @@ export class AppModule { }
 
 <br>
 
-##### 5.4.2 Filtrado
+##### 5.4.2 Filtrar producto
 
+<br>
 
 1. En el método `ngOnInit()`, se suscribe a los cambios del control de autocompletado (`autocompleteControl.valueChanges`) utilizando el operador `pipe()`.
 
@@ -567,3 +568,75 @@ productosFiltrados: Observable<Producto[]>;
 
 </p>
 </details>
+
+<br>
+
+##### 5.4.2 Seleccionar producto
+
+<br>
+
+1. `seleccionarProducto(value: any): void`: Este método se ejecuta cuando se selecciona un producto desde el control de autocompletado. El producto seleccionado se pasa como `value`.
+
+2. `let producto = value as Producto;`: Aquí, se convierte `value` a un objeto de tipo `Producto`. Esto asume que `value` es de tipo `any` y puede ser un `string` (en caso de ser un valor ingresado manualmente) o un objeto `Producto` (en caso de haberse seleccionado desde el autocompletado).
+
+3. `if (this.existeItem(producto.id)) {...}`: Se verifica si el producto seleccionado ya existe en la factura actual. Esto se hace llamando al método `existeItem()` y pasando el `id` del producto como argumento.
+
+4. `this.incrementaCantidad(producto.id);`: Si el producto ya existe en la factura, se llama al método `incrementaCantidad()` para aumentar la cantidad del producto existente en la factura.
+
+5. `else {...}`: Si el producto no existe en la factura, se crea un nuevo objeto `ItemFactura`, se asigna el producto seleccionado a este nuevo item y se agrega a la lista de items (`factura.items`) de la factura.
+
+6. `this.autocompleteControl.setValue('');`: Luego de agregar el producto a la factura, se restablece el valor del control de autocompletado a una cadena vacía, lo que limpia la selección y permite al usuario seleccionar otro producto.
+
+7. `existeItem(id: number): boolean {...}`: Este método verifica si un item con el `id` especificado (del producto) ya existe en la lista de items de la factura. Retorna `true` si el item existe y `false` en caso contrario.
+
+8. `incrementaCantidad(id: number): void {...}`: Este método incrementa la cantidad de un item existente en la factura con el `id` especificado (del producto). Itera por la lista de items y aumenta la cantidad si el item corresponde al `id` del producto seleccionado.
+
+En general, este código permite agregar productos a una factura y manejar la cantidad de cada producto en la factura. Si el producto ya existe en la factura, se incrementa la cantidad, y si es un nuevo producto, se agrega a la lista de items de la factura.
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/7464b788-3bfc-4f98-919c-7375d6ab384a)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+
+ seleccionarProducto(value: any): void {
+    let producto = value as Producto;
+    console.log(producto);
+    if (this.existeItem(producto.id)) {
+      this.incrementaCantidad(producto.id);
+    } else {
+      let nuevoItem = new ItemFactura();
+      nuevoItem.producto = producto;
+      this.factura.items.push(nuevoItem);
+    }
+
+    this.autocompleteControl.setValue('');
+  }
+
+  existeItem(id: number): boolean {
+    let existe = false;
+    this.factura.items.forEach((item: ItemFactura) => {
+      if (id === item.producto.id) {
+        existe = true;
+      }
+    });
+    return existe;
+  }
+
+  incrementaCantidad(id: number): void {
+    this.factura.items = this.factura.items.map((item: ItemFactura) => {
+      if (id === item.producto.id) {
+        ++item.cantidad;
+      }
+      return item;
+    });
+  }
+
+
+``
+
+</p>
+</details>
+
+
