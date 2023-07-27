@@ -750,3 +750,50 @@ En general, este código permite agregar productos a una factura y manejar la ca
 
 </p>
 </details>
+
+<br>
+
+### 5.6 Items 
+
+La lista de los items, es decir, de los productos seleccionados en la factura
+
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/34286d8c-8ccc-42ba-b7be-9ecbfa4a2409)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```html
+ <div class="alert alert-info my-4" *ngIf="factura.items.length == 0">
+                No hay líneas asignadas para la factura. Debe agregar al menos una!
+              </div>
+              <table class="table table-striped table-hover table-sm" *ngIf="factura.items.length > 0">        
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of factura.items">
+                    <td>{{item.producto.nombre}}</td>
+                    <td>{{item.producto.precio |currency:'COP':"symbol"}}</td>
+                    <td><input type="number" value="{{item.cantidad}}" class="form-control col-sm-4" (change)="actualizarCantidad(item.producto.id, $event)"></td>
+                    <td>{{item.calcularImporte() |currency:'COP':'symbol'}}</td>
+                    <td><button class="btn btn-danger btn-sm" type="button"
+                      (click)="eliminarItemFactura(item.producto.id)">x</button></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="float-right" *ngIf="factura.items.length > 0">Gran Total: <span>{{factura.calcularGranTotal() |currency:'COP':'symbol' }}</span></h5>
+
+
+```
+
+</p>
+</details>
+
+
