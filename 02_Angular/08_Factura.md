@@ -515,9 +515,41 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 export class AppModule { }
 
 
-``
+```
 
 </p>
 </details>
 
+<br>
 
+##### 5.4.2 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/82076f33-b365-425e-9650-42d07b69430a)
+
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+autocompleteControl = new FormControl();
+productosFiltrados: Observable<Producto[]>;
+
+ ngOnInit() {
+    this.activatedRoute.paramMap.subscribe(params => {
+      let clienteId = +params.get('clienteId');
+      this.clienteService.getCliente(clienteId).subscribe(cliente => this.factura.cliente = cliente);
+    });
+
+    this.productosFiltrados = this.autocompleteControl.valueChanges
+      .pipe(
+        map(value => typeof value === 'string' ? value : value.nombre),
+        flatMap(value => value ? this._filter(value) : [])
+      );
+  }
+
+
+
+```
+
+</p>
+</details>
