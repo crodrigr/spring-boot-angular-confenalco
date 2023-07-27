@@ -18,7 +18,8 @@ flowchart LR
 
 Crear el método delete en **cliente.service.ts**. Este método consume del **api** delete que borra un cliente de la base de datos.
 
-![image](https://user-images.githubusercontent.com/31961588/167059473-2ecb6524-d6a4-483f-9058-890354d247ed.png)
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/d83d68fe-0908-42d1-8b88-f209156726e9)
+
 
 <details><summary>Mostrar código</summary>
 <p>
