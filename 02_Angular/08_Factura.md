@@ -937,6 +937,8 @@ En el componente de **cliente.component.html** adiciona el href que va direccion
 <td><button type="button" class="btn btn-secondary"   [routerLink]="['/facturas/form', cliente.id]" >Crear factura</button></td>
 
 ```
+</p>
+</details>
 
 ## 6. Fuentes
 
