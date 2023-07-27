@@ -236,3 +236,153 @@ import swal from 'sweetalert2';
 
 </p>
 </details>
+
+### 4.2 Definición atributos 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/d275df6f-b83b-4843-aae8-3a84b8e5f531)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+
+  titulo: string = 'Nueva Factura';
+  factura: Factura = new Factura();
+  autocompleteControl = new FormControl();
+  productosFiltrados: Observable<Producto[]>;
+
+``
+
+</p>
+</details>
+
+### 4.3 Método constructor
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/db2819f5-fe13-4147-95d4-8e270b56deef)
+
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+
+ constructor(private clienteService: ClienteService,
+    private facturaService: FacturaService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) { 
+    
+  }
+
+``
+
+</p>
+</details>
+
+<br>
+
+### 4.4 Formulario reactivo
+
+
+<br>
+
+En Angular, `FormControl` es una clase del módulo `@angular/forms` que representa un control de formulario individual en un formulario reactivo. Los formularios reactivos te permiten construir formularios complejos y dinámicos con un mayor control sobre la validación del formulario, el manejo de la entrada del usuario y el envío del formulario.
+
+`FormControl` se utiliza para administrar el estado y la validación de un control de formulario individual, como un campo de entrada, casilla de verificación, botón de opción, etc. Proporciona propiedades y métodos para rastrear y actualizar el valor y el estado de validación del control de formulario.
+
+Aquí te muestro cómo crear y utilizar un `FormControl` en un componente de Angular:
+
+1. Importa los módulos necesarios en tu componente:
+
+```typescript
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+```
+
+2. Crea una nueva instancia de `FormControl` en la clase del componente:
+
+```typescript
+@Component({
+  selector: 'app-mi-componente',
+  templateUrl: './mi-componente.component.html',
+})
+export class MiComponente {
+  miFormControl: FormControl = new FormControl();
+}
+```
+
+3. Conecta el `FormControl` al control de formulario en el archivo de la plantilla:
+
+```html
+<!-- mi-componente.component.html -->
+<input [formControl]="miFormControl" type="text" />
+```
+
+En este ejemplo, hemos creado un `FormControl` llamado `miFormControl` y lo hemos vinculado a un campo de entrada en la plantilla mediante la directiva de enlace `[formControl]`. Ahora, cualquier cambio realizado en el campo de entrada se reflejará en el `FormControl`, y viceversa.
+
+También puedes establecer un valor inicial para el `FormControl` pasándolo como argumento al crear la instancia:
+
+```typescript
+// Estableciendo un valor inicial
+miFormControl: FormControl = new FormControl('Valor inicial');
+```
+
+Además, `FormControl` proporciona diversos métodos y propiedades para manejar la validación y obtener información sobre el estado del control de formulario. Por ejemplo:
+
+```typescript
+// Comprobando la validez del control de formulario
+if (this.miFormControl.valid) {
+  // El control de formulario es válido
+} else {
+  // El control de formulario es inválido
+}
+
+// Obteniendo el valor actual del control de formulario
+const valor = this.miFormControl.value;
+
+// Restableciendo el control de formulario a su estado inicial
+this.miFormControl.reset();
+```
+
+Con `FormControl`, tienes un mayor control sobre la lógica y la interacción en los formularios de tu aplicación Angular.
+
+
+<br>
+
+### 4.5 Crear factura
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/7f9c26a0-28c9-4cc5-9c57-03fb62cd6603)
+
+
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+
+
+
+``
+
+</p>
+</details>
+
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/7f9c26a0-28c9-4cc5-9c57-03fb62cd6603)
+
+
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+
+
+
+``
+
+</p>
+</details>
+
+
+
+
