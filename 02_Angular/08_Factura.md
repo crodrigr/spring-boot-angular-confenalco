@@ -806,7 +806,7 @@ Se adiciona un path en el **app-routing.module.ts**
 <details><summary>Mostrar código</summary>
 <p>
 
-```html
+```typescript
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -833,5 +833,24 @@ export class AppRoutingModule { }
 
 </p>
 </details>
+
+#### 5.7.1 Crear Factura link
+
+En el componente de **cliente.component.html** adiciona el href que va direcciona al formulario de crar factura. 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/b23ff9ad-e971-483a-ace7-deb9304241c0)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```html
+<td><button type="button" class="btn btn-secondary"   [routerLink]="['/facturas/form', cliente.id]" >Crear factura</button></td>
+
+```
+
+</p>
+</details>
+
+
 
 
