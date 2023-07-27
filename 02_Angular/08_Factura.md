@@ -450,4 +450,6 @@ Ahora se va construir el html donde se var redenrizar los datos de la factura pa
 
 ### 5.4 Buscador
 
+El buscador es una lista de producto, el cual, se filtra por un autocomplete. Este componente se va usar de **@angular/material**. En este caso ya si hizo la instalación para el **datePicker**
+
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/26c409d9-c2c1-4405-9e2e-54894bf5e58b)
