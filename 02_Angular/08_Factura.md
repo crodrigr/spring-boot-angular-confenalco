@@ -453,3 +453,71 @@ Ahora se va construir el html donde se var redenrizar los datos de la factura pa
 El buscador es una lista de producto, el cual, se filtra por un autocomplete. Este componente se va usar de **@angular/material**. En este caso ya si hizo la instalación para el **datePicker**
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/26c409d9-c2c1-4405-9e2e-54894bf5e58b)
+
+##### 5.4.1 Importar librerias 
+
+Se importa las librerias del autocomplete en el **app.module.**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/e6ad578e-f49d-4f5c-9a6e-82bcb5909637)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClient, HttpClientModule  } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import { FormComponent } from './cliente/form.component';
+import { FacturaComponent } from './factura/factura.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+
+
+
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ClienteComponent,
+    FormComponent,
+    FacturaComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatAutocompleteModule
+    
+ 
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+``
+
+</p>
+</details>
+
+
