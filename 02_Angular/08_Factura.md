@@ -528,6 +528,38 @@ El buscador es una lista de producto, el cual, se filtra por un autocomplete. Es
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/26c409d9-c2c1-4405-9e2e-54894bf5e58b)
 
+**Autocomplete en html**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/1932bf69-0580-40b7-977a-c96c1c9b8e97)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```html
+<div class="form-group row">
+        <div class="col-sm-6">
+          <mat-form-field>
+            <input type="text" placeholder="Añadir producto" aria-label="Productos" matInput [formControl]="autocompleteControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="mostrarNombre" (optionSelected)="seleccionarProducto($event.option.value)">
+              <mat-option *ngFor="let producto of productosFiltrados | async" [value]="producto">
+                {{producto.nombre}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <div class="alert alert-danger" *ngIf="autocompleteControl.invalid && facturaForm.submitted">
+            La factura no puede no tener líneas!.
+          </div>
+        </div>
+      </div>
+
+
+``
+
+</p>
+</details>
+
+
+
 ##### 5.4.1 Importar librerias 
 
 Se importa las librerias del autocomplete en el **app.module.**
