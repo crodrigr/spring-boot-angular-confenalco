@@ -430,5 +430,24 @@ Ahora se va construir el html donde se var redenrizar los datos de la factura pa
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/5984a0ce-8119-49a4-ad81-99f813040d83)
 
 
+### 5.1 Card
 
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/87715ee5-8455-4cde-aac8-4aa2ee14898e)
 
+<br>
+
+### 5.2 Formulario
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/3145dedd-ca1b-4a9f-be63-b7a775833b9b)
+
+<br>
+
+### 5.3 Botón
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/e24dff99-05ab-4396-a2ea-5a49dcbb6365)
+
+<br>
+
+### 5.4 Buscador
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/26c409d9-c2c1-4405-9e2e-54894bf5e58b)
