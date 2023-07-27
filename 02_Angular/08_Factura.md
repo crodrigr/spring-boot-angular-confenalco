@@ -365,8 +365,9 @@ Con `FormControl`, tienes un mayor control sobre la lógica y la interacción en
 
 ### 4.5 Crear factura
 
-![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/7f9c26a0-28c9-4cc5-9c57-03fb62cd6603)
+Se crea le métododo de **crear** en el componente de **facturas.component.ts**
 
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/7f9c26a0-28c9-4cc5-9c57-03fb62cd6603)
 
 
 <details><summary>Mostrar código</summary>
@@ -392,6 +393,28 @@ Con `FormControl`, tienes un mayor control sobre la lógica y la interacción en
 
 </p>
 </details>
+
+### 4.5 Eliminar factura
+
+Se crea le métododo de **elimiar** en el componente de **facturas.component.ts**
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/9ab56473-102c-44c3-a012-6bda21c72c24)
+
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+
+  eliminarItemFactura(id: number): void {
+    this.factura.items = this.factura.items.filter((item: ItemFactura) => id !== item.producto.id);
+  }
+
+```
+
+</p>
+</details>
+
 
 
 
