@@ -711,7 +711,7 @@ En general, este código permite agregar productos a una factura y manejar la ca
   }
 
 
-``
+```
 
 </p>
 </details>
