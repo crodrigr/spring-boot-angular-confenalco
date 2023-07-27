@@ -823,7 +823,7 @@ En general, este código permite agregar productos a una factura y manejar la ca
 
 <br>
 
-#### 5.4.5 Mostrar mensaje
+##### 5.4.5 Mostrar mensaje
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/049cae8f-7c51-4736-b708-1704bc6a7ea4)
 
