@@ -590,27 +590,9 @@ Ahora se va construir el html donde se var redenrizar los datos de la factura pa
 
 <br>
 
-### 5.4 Mostrar mensaje
-
-![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/049cae8f-7c51-4736-b708-1704bc6a7ea4)
-
-<details><summary>Mostrar código</summary>
-<p>
-
-```typescript
-  mostrarNombre(producto?: Producto): string | undefined {
-    return producto ? producto.nombre : undefined;
-  }
 
 
-```
-
-</p>
-</details>
-
-<br>
-
-### 5.5 Buscador
+### 5.4 Buscador
 
 El buscador es una lista de producto, el cual, se filtra por un autocomplete. Este componente se va usar de **@angular/material**. En este caso ya si hizo la instalación para el **datePicker**
 
@@ -832,6 +814,26 @@ En general, este código permite agregar productos a una factura y manejar la ca
           </div>
         </div>
       </div>
+
+
+```
+
+</p>
+</details>
+
+<br>
+
+#### 5.4.5 Mostrar mensaje
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/049cae8f-7c51-4736-b708-1704bc6a7ea4)
+
+<details><summary>Mostrar código</summary>
+<p>
+
+```typescript
+  mostrarNombre(producto?: Producto): string | undefined {
+    return producto ? producto.nombre : undefined;
+  }
 
 
 ```
