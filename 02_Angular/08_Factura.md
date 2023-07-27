@@ -467,6 +467,55 @@ Ahora se va construir el html donde se var redenrizar los datos de la factura pa
 
 <br>
 
+<details><summary>Mostrar código</summary>
+<p>
+
+```html
+
+<form #facturaForm="ngForm">
+
+            <div class="form-group row" *ngIf="factura.cliente">
+                <label for="cliente" class="col-sm-2 col-form-label">Cliente</label>
+                <div class="col-sm-6">
+                    <input type="text" name="cliente" value="{{factura.cliente.nombre}} {{factura.cliente.apellido}}"
+                        class="form-control" disabled>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="descripcion" class="col-sm-2 col-form-label">Descripción</label>
+                <div class="col-sm-6">
+                    <input type="text" name="descripcion" [(ngModel)]="factura.descripcion" class="form-control"
+                        required #descripcion="ngModel">
+                    <div class="alert alert-danger"
+                        *ngIf="descripcion.invalid && descripcion.touched || descripcion.invalid && facturaForm.submitted">
+                        La descripción es requerida.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="observacion" class="col-sm-2 col-form-label">Observación</label>
+                <div class="col-sm-6">
+                    <textarea name="observacion" [(ngModel)]="factura.observacion" class="form-control"></textarea>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <input type="submit" (click)="create(facturaForm)" value="Crear Factura" class="btn btn-secondary">
+                </div>
+            </div>
+
+        </form>
+
+```
+
+</p>
+</details>
+
+
 ### 5.3 Botón
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/e24dff99-05ab-4396-a2ea-5a49dcbb6365)
