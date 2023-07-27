@@ -524,7 +524,7 @@ export class AppModule { }
 
 ##### 5.4.2 Filtrar producto
 
-<br>
+
 
 1. En el método `ngOnInit()`, se suscribe a los cambios del control de autocompletado (`autocompleteControl.valueChanges`) utilizando el operador `pipe()`.
 
@@ -571,9 +571,8 @@ productosFiltrados: Observable<Producto[]>;
 
 <br>
 
-##### 5.4.2 Seleccionar producto
+##### 5.4.3 Seleccionar producto
 
-<br>
 
 1. `seleccionarProducto(value: any): void`: Este método se ejecuta cuando se selecciona un producto desde el control de autocompletado. El producto seleccionado se pasa como `value`.
 
