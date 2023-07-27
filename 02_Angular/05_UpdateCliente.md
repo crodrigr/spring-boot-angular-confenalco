@@ -124,18 +124,24 @@ En el **form.component.ts** se crea un método **update** cliente para que sea l
   
 ```typescript
 
-update(): void{
+update(): void {
     this.clienteService.update(this.cliente).subscribe({
-      next:(cliente)=>{
-         this.router.navigate(['/clientes']);        
+      next: (cliente) => {
+        this.router.navigate(['/clientes']);
       },
-      error:(err)=>{
-        this.errores=err.error.errors as string[];
+      error: (err) => {
+        this.errores = [];
+        if (err.error.errors) {
+          this.errores = err.error.errors as string[];
+        } else if (err.error.error) {
+          this.errores.push(err.error.mensaje);
+          console.error(err.error.error);
+        }
         console.error('Código del error desde el backend: ' + err.status);
-        console.error(err.error.errors);
       }
     });
   }
+
 
 ```
 </p>
