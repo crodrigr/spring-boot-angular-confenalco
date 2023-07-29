@@ -234,7 +234,7 @@ import { FacturaService } from './services/factura.service';
 import { Producto } from './models/Producto';
 import { ItemFactura } from './models/ItemFactura';
 import { Cliente } from '../cliente/cliente';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 ```
