@@ -224,16 +224,18 @@ Se importa las librerias a usar en el componente de **facturas**
 <p>
 
 ```typescript
-import {FormControl} from '@angular/forms';
-import {Observable} from 'rxjs';
-import {map, flatMap,startWith} from 'rxjs/operators';
-import { Factura } from './models/factura';
-import { ClienteService } from  '../cliente/cliente.service'
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
+import { Factura } from './models/Factura';
+import { ClienteService } from '../cliente/cliente.service';
 import { FacturaService } from './services/factura.service';
-import { Producto } from './models/producto';
-import { ItemFactura } from './models/item-factura';
-import swal from 'sweetalert2';
+import { Producto } from './models/Producto';
+import { ItemFactura } from './models/ItemFactura';
+import { Cliente } from '../cliente/cliente';
+import { ActivatedRoute, Route } from '@angular/router';
+import Swal from 'sweetalert2';
 
 ```
 
