@@ -699,7 +699,8 @@ Recuerda que este código debe estar dentro de un componente de Angular y que el
 autocompleteControl = new FormControl();
 productosFiltrados: Observable<Producto[]>;
 
- ngOnInit() {
+  ngOnInit() {
+  
     this.activatedRoute.paramMap.subscribe(params => {
       let clienteId = +params.get('clienteId');
       this.clienteService.getCliente(clienteId).subscribe(cliente => this.factura.cliente = cliente);
@@ -708,8 +709,12 @@ productosFiltrados: Observable<Producto[]>;
     this.productosFiltrados = this.autocompleteControl.valueChanges
       .pipe(
         map(value => typeof value === 'string' ? value : value.nombre),
-        flatMap(value => value ? this._filter(value) : [])
+        mergeMap(value => value ? this._filter(value) : [])
       );
+  }
+  private _filter(value: string): Observable<Producto[]> {
+    const filterValue = value.toLowerCase();
+    return this.facturaService.filtrarProductos(filterValue);
   }
 
 
