@@ -332,11 +332,11 @@ public class UsuarioServiceImpl implements UsuarioService, UserDetailsService {
 </p>
 </details>
 
-Este fragmento de código corresponde a la implementación del método `loadUserByUsername` de una clase de servicio en Spring Boot que implementa la interfaz `UserDetailsService`. Este método se utiliza para cargar los detalles del usuario durante el proceso de autenticación en Spring Security. Aquí está la explicación paso a paso del código:
+El código que proporcionaste es una implementación del método `loadUserByUsername` de una clase de servicio en Spring Boot que implementa la interfaz `UserDetailsService`. Este método se utiliza para cargar los detalles del usuario durante el proceso de autenticación en Spring Security. Vamos a revisar cada parte del código:
 
-1. **Método `loadUserByUsername`**: Este método se anota con `@Override`, lo que significa que está sobrescribiendo el método de la interfaz `UserDetailsService`.
+1. **Método `loadUserByUsername`**: Este método se anota con `@Override`, lo que indica que está sobrescribiendo el método de la interfaz `UserDetailsService`.
 
-2. **Buscar el usuario en la base de datos**: Se utiliza el `usuarioDao` (que es una instancia de `UsuarioRepository`) para buscar un usuario en la base de datos a partir del nombre de usuario proporcionado.
+2. **Buscar el usuario en el repositorio**: Se utiliza el `usuarioRepository` para buscar un usuario en la base de datos a partir del nombre de usuario proporcionado.
 
 3. **Comprobación de existencia del usuario**: Si no se encuentra ningún usuario con el nombre de usuario proporcionado, se lanza una excepción `UsernameNotFoundException`. Esto ocurre cuando un usuario intenta autenticarse con un nombre de usuario que no existe en el sistema.
 
@@ -344,10 +344,9 @@ Este fragmento de código corresponde a la implementación del método `loadUser
 
 5. **Logging**: Se utilizan registros (logs) para registrar información relevante sobre los roles del usuario. Cada rol se registra utilizando el `logger`.
 
-6. **Creación del objeto `User`**: Finalmente, se crea un objeto `User` que implementa la interfaz `UserDetails`, que representa al usuario autenticado. Se utilizan varios atributos del usuario, como el nombre de usuario, contraseña, estado de cuenta y la lista de authorities (roles), para construir el objeto `User`.
+6. **Creación del objeto `User`**: Finalmente, se crea un objeto `User` que implementa la interfaz `UserDetails`, que representa al usuario autenticado. Se utilizan varios atributos del usuario, como el nombre de usuario, contraseña, estado de cuenta y la lista de `authorities` (roles), para construir el objeto `User`.
 
 7. **Retorno del objeto `User`**: El objeto `User` construido se devuelve como resultado del método. Es utilizado por Spring Security para llevar a cabo el proceso de autenticación y autorización.
 
-En resumen, este método carga los detalles del usuario durante el proceso de autenticación y devuelve un objeto `User` que representa al usuario autenticado, incluyendo sus roles que se utilizarán para controlar el acceso en la aplicación protegida por Spring Security.
-
+En resumen, este método carga los detalles del usuario durante el proceso de autenticación y devuelve un objeto `User` que representa al usuario autenticado, incluyendo sus roles que se utilizarán para controlar el acceso en la aplicación protegida por Spring Security. La diferencia en este código respecto al anterior es que se utiliza `usuarioRepository` en lugar de `usuarioDao` para buscar el usuario en la base de datos. Ambos nombres (`usuarioRepository` y `usuarioDao`) representan un componente de acceso a datos (un repositorio) que se utiliza para interactuar con la base de datos y obtener la información del usuario.
 <br>
