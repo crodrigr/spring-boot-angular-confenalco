@@ -4,6 +4,8 @@
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/31a02210-3c5f-4c1b-a55f-60033a4f4fba)
 
 <br>
+<br>
+<br>
 
 ## 1 Authorization Server
 
@@ -22,3 +24,27 @@ En una arquitectura típica de OAuth 2.0, el Authorization Server trabaja junto 
 En el ecosistema de Spring Boot, puedes implementar un Authorization Server utilizando Spring Security OAuth 2.0, que proporciona una amplia gama de características y opciones para gestionar la seguridad y la autorización en tu aplicación. Spring Security OAuth 2.0 facilita la configuración de un Authorization Server personalizado y te permite controlar el proceso de emisión y validación de tokens de acceso.
 
 Es importante entender que la implementación de un Authorization Server debe realizarse con especial cuidado, ya que la seguridad y la protección de los recursos de los usuarios dependen de su correcto funcionamiento y configuración. Por lo tanto, siempre es recomendable seguir las mejores prácticas de seguridad y utilizar bibliotecas y herramientas probadas para asegurar la robustez de tu Authorization Server y tu aplicación en general.
+
+<br>
+<br>
+<br>
+
+## 2. Resource Server
+
+<br>
+
+En el contexto de seguridad de aplicaciones web y OAuth 2.0, un "Resource Server" (Servidor de Recursos) es el componente que almacena y protege los recursos a los que se accede mediante tokens de acceso emitidos por el Authorization Server (Servidor de Autorización).
+
+En el flujo de OAuth 2.0, una vez que un usuario ha sido autenticado y autorizado por el Authorization Server, este emite un token de acceso al cliente (aplicación cliente). El cliente utiliza este token de acceso para acceder a los recursos protegidos en nombre del usuario en el Resource Server.
+
+El Resource Server tiene la responsabilidad de validar el token de acceso recibido de la aplicación cliente y, si el token es válido y autorizado, permitir el acceso a los recursos solicitados. Los recursos pueden ser datos, servicios o cualquier otra información protegida que el usuario haya permitido que la aplicación cliente acceda.
+
+El Resource Server debe asegurarse de que el token de acceso es válido, no ha caducado y que la aplicación cliente tiene los permisos adecuados para acceder a los recursos solicitados. Además, puede aplicar políticas de autorización adicionales para determinar si el cliente tiene el derecho de acceder a recursos específicos.
+
+En una arquitectura típica de OAuth 2.0, el Resource Server trabaja junto con otros componentes clave, como:
+
+1. **Authorization Server (Servidor de Autorización)**: Es el servidor que emite los tokens de acceso después de autenticar y autorizar al usuario. El Authorization Server y el Resource Server pueden ser el mismo servidor en algunos casos.
+
+2. **Client Application (Aplicación Cliente)**: Es la aplicación que solicita el acceso a los recursos protegidos en nombre del usuario. La aplicación cliente obtiene el token de acceso del Authorization Server y lo envía junto con las solicitudes al Resource Server para acceder a los recursos.
+
+El Resource Server juega un papel importante en la implementación de la seguridad y la protección de recursos en aplicaciones distribuidas y sistemas que utilizan el protocolo OAuth 2.0 para gestionar el acceso a recursos protegidos. Al validar los tokens de acceso y aplicar políticas de autorización, el Resource Server garantiza que solo las aplicaciones autorizadas y autenticadas pueden acceder a los datos y servicios protegidos.
