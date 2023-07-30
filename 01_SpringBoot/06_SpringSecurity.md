@@ -72,6 +72,25 @@ Detalle del proyeceso de autenticación. Lo que ocurre detras de escena.
 
 ## 4. Dependencias
 
+<br>
+
+### 4.1 Version spring
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/78c988a5-8146-4759-b45d-36b6781165e7)
+
+<br>
+
+### 4.2 Dependencias oauth
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/2cfe4160-5524-47c0-932d-a6d283577020)
+
+<br>
+
+### 4.3 Jakarta a javax
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/10f2fe27-16ce-4eea-a0ff-5879e14a1e48)
+
+<br>
 
 <details><summary>Mostrar código</summary>
 
