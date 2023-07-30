@@ -63,7 +63,10 @@ Detalle del proyeceso de autenticación. Lo que ocurre detras de escena.
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/39af06cd-95cf-4fe8-9426-c4b42bbfd87a)
 
-### 3.1 Resource Server
+<br>
+
+### 3.2 Resource Server
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/28fc066f-8fb1-4e8b-96f4-81777310ea14)
+
 
