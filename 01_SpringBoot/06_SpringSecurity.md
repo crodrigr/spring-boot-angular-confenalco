@@ -49,7 +49,15 @@ En una arquitectura típica de OAuth 2.0, el Resource Server trabaja junto con o
 
 El Resource Server juega un papel importante en la implementación de la seguridad y la protección de recursos en aplicaciones distribuidas y sistemas que utilizan el protocolo OAuth 2.0 para gestionar el acceso a recursos protegidos. Al validar los tokens de acceso y aplicar políticas de autorización, el Resource Server garantiza que solo las aplicaciones autorizadas y autenticadas pueden acceder a los datos y servicios protegidos.
 
+<br>
+<br>
+<br>
 
+## 3. Proceso autenticación
+
+<br>
+
+Detalle del proyeceso de autenticación. Lo que ocurre detras de escena. 
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/39af06cd-95cf-4fe8-9426-c4b42bbfd87a)
 
