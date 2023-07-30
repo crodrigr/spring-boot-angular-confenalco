@@ -179,3 +179,175 @@ Detalle del proyeceso de autenticación. Lo que ocurre detras de escena.
 </p>
 </details>
 
+<br>
+<br>
+<br>
+
+## 5. Usuario 
+
+### 5.1 UsuarioService 
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/ad57fc04-f86b-490d-82a3-70617b2545bc)
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```java
+
+package com.demo.demo.services;
+
+import com.demo.demo.repository.entities.Usuario;
+
+public interface UsuarioService {
+
+    
+	public Usuario findByUsername(String username);
+	
+	public void delete(Usuario Usuario);
+
+
+}
+
+
+```
+
+</p>
+</details>
+
+<br>
+
+### 5.2 UsuarioRepository
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/5f16822c-a2d6-435e-88c5-6ff0fc2e9fb9)
+
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```java
+package com.demo.demo.repository;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import com.demo.demo.repository.entities.Usuario;
+
+public interface UsuarioRepository  extends CrudRepository<Usuario,Long> {
+
+    public Usuario findByUsername(String username);
+	
+	@Query("select u from Usuario u where u.username=?1")	
+	public Usuario findByUsername2(String username);
+    
+}
+
+
+```
+
+</p>
+</details>
+
+<br>
+
+### 5.3 UsuarioServiceImpl
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/3aafa639-d97a-4bcb-bae9-cc44ff8a6b8a)
+
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```java
+
+package com.demo.demo.services.impl;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
+import com.demo.demo.repository.UsuarioRepository;
+import com.demo.demo.repository.entities.Usuario;
+import com.demo.demo.services.UsuarioService;
+
+@Service
+public class UsuarioServiceImpl implements UsuarioService, UserDetailsService {
+	
+	private Logger logger = LoggerFactory.getLogger(UsuarioServiceImpl.class);
+
+	@Autowired
+	private UsuarioRepository usuarioDao;
+	
+	@Override
+	@Transactional(readOnly=true)
+	public Usuario findByUsername(String username) {
+		return usuarioDao.findByUsername(username);
+	}
+	@Override
+	@Transactional
+	public void delete(Usuario usuario) {
+		usuarioDao.delete(usuario);
+		
+	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		
+		Usuario usuario=usuarioDao.findByUsername(username);
+		
+		if(usuario==null){
+		  logger.error("Error en el login: no existe el usuario "+username+" en el sistema!");
+		  throw new UsernameNotFoundException("Error en el login: no existe el usuario " +username+ " en el sistema!");
+		}
+		
+		List<GrantedAuthority> authorities = usuario.getRoles()
+				.stream()
+				.map(role-> new SimpleGrantedAuthority(role.getNombre()))
+				.peek(authority-> logger.info("Role: "+authority.getAuthority()))
+				.collect(Collectors.toList());
+		
+		return new User(usuario.getUsername(),usuario.getPassword(),usuario.getEnabled(),true,true,true,authorities);
+		
+		
+	}
+
+}
+
+```
+
+</p>
+</details>
+
+Este fragmento de código corresponde a la implementación del método `loadUserByUsername` de una clase de servicio en Spring Boot que implementa la interfaz `UserDetailsService`. Este método se utiliza para cargar los detalles del usuario durante el proceso de autenticación en Spring Security. Aquí está la explicación paso a paso del código:
+
+1. **Método `loadUserByUsername`**: Este método se anota con `@Override`, lo que significa que está sobrescribiendo el método de la interfaz `UserDetailsService`.
+
+2. **Buscar el usuario en la base de datos**: Se utiliza el `usuarioDao` (que es una instancia de `UsuarioRepository`) para buscar un usuario en la base de datos a partir del nombre de usuario proporcionado.
+
+3. **Comprobación de existencia del usuario**: Si no se encuentra ningún usuario con el nombre de usuario proporcionado, se lanza una excepción `UsernameNotFoundException`. Esto ocurre cuando un usuario intenta autenticarse con un nombre de usuario que no existe en el sistema.
+
+4. **Mapeo de roles a authorities**: Si el usuario es encontrado en la base de datos, se procede a obtener sus roles y mapearlos a objetos `GrantedAuthority`. Cada rol del usuario se transforma en un `SimpleGrantedAuthority` y se agrega a una lista de `authorities`. Los `GrantedAuthority` representan los permisos o roles que un usuario tiene en el sistema y se utilizan para controlar el acceso a recursos y funcionalidades.
+
+5. **Logging**: Se utilizan registros (logs) para registrar información relevante sobre los roles del usuario. Cada rol se registra utilizando el `logger`.
+
+6. **Creación del objeto `User`**: Finalmente, se crea un objeto `User` que implementa la interfaz `UserDetails`, que representa al usuario autenticado. Se utilizan varios atributos del usuario, como el nombre de usuario, contraseña, estado de cuenta y la lista de authorities (roles), para construir el objeto `User`.
+
+7. **Retorno del objeto `User`**: El objeto `User` construido se devuelve como resultado del método. Es utilizado por Spring Security para llevar a cabo el proceso de autenticación y autorización.
+
+En resumen, este método carga los detalles del usuario durante el proceso de autenticación y devuelve un objeto `User` que representa al usuario autenticado, incluyendo sus roles que se utilizarán para controlar el acceso en la aplicación protegida por Spring Security.
+
+<br>
