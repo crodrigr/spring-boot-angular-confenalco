@@ -348,5 +348,6 @@ El código que proporcionaste es una implementación del método `loadUserByUser
 
 7. **Retorno del objeto `User`**: El objeto `User` construido se devuelve como resultado del método. Es utilizado por Spring Security para llevar a cabo el proceso de autenticación y autorización.
 
-En resumen, este método carga los detalles del usuario durante el proceso de autenticación y devuelve un objeto `User` que representa al usuario autenticado, incluyendo sus roles que se utilizarán para controlar el acceso en la aplicación protegida por Spring Security. La diferencia en este código respecto al anterior es que se utiliza `usuarioRepository` en lugar de `usuarioDao` para buscar el usuario en la base de datos. Ambos nombres (`usuarioRepository` y `usuarioDao`) representan un componente de acceso a datos (un repositorio) que se utiliza para interactuar con la base de datos y obtener la información del usuario.
+En resumen, este método carga los detalles del usuario durante el proceso de autenticación y devuelve un objeto `User` que representa al usuario autenticado, incluyendo sus roles que se utilizarán para controlar el acceso en la aplicación protegida por Spring Security.  `usuarioRepository` representa un componente de acceso a datos (un repositorio) que se utiliza para interactuar con la base de datos y obtener la información del usuario.
+
 <br>
