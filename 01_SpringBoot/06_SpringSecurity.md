@@ -435,7 +435,7 @@ public class InfoAdicionalToken implements TokenEnhancer {
 
 <br>
 
-### 6.1 InfoAdicionalToken
+### 6.2 InfoAdicionalToken
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/6124aec3-4d43-4c56-a02c-26e7c683ab08)
 
@@ -460,4 +460,83 @@ public class JwtConfig {
 </p>
 </details>
 
+<br>
 
+### 6.3 ResourceServerConfig
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/10dd152b-bb68-4348-b915-04dcdb6820e1)
+
+
+Este código muestra una configuración de un servidor de recursos (Resource Server) en una aplicación Spring Boot con Spring Security. El servidor de recursos es responsable de proteger y controlar el acceso a los recursos (endpoints/APIs) de la aplicación. A continuación, se explica cada parte del código:
+
+1. **Anotaciones `@Configuration` y `@EnableResourceServer`**: La clase está anotada con `@Configuration`, lo que indica que es una clase de configuración de Spring, y con `@EnableResourceServer`, lo que habilita la funcionalidad de servidor de recursos en la aplicación. El servidor de recursos es una característica de Spring Security que protege y autentica las solicitudes de recursos.
+
+2. **Método `configure(HttpSecurity http)`**: Este método sobrescrito se utiliza para configurar la seguridad del servidor de recursos. Aquí, se define cómo se deben proteger los endpoints/APIs de la aplicación. En este caso:
+
+   - El endpoint `/api/clientes` con el método HTTP GET se configura para permitir el acceso a todos, lo que significa que es de acceso público sin requerir autenticación. Esto se hace utilizando el método `permitAll()` para el método GET específico.
+   - Para cualquier otra solicitud (otros endpoints y métodos HTTP), se requiere autenticación para acceder. Esto se establece con el método `authenticated()`.
+
+3. **Método `corsConfigurationSource()`**: Este método define la configuración CORS (Cross-Origin Resource Sharing) que permite solicitudes desde el origen `http://localhost:4200`. CORS es necesario cuando la aplicación del cliente se ejecuta en un dominio diferente al del servidor.
+
+4. **Configuración de CORS**: En el método `corsConfigurationSource()`, se crea un objeto `CorsConfiguration` y se establecen las reglas de CORS:
+
+   - `setAllowedOrigins`: Se establece el origen permitido para las solicitudes. En este caso, se permite `http://localhost:4200`, lo que significa que las solicitudes desde este origen se aceptarán.
+   - `setAllowedMethods`: Se definen los métodos HTTP permitidos. Aquí, se permiten GET, POST, PUT, DELETE y OPTIONS.
+   - `setAllowCredentials`: Se habilita el envío de credenciales (cookies, encabezados de autorización) en la solicitud CORS.
+   - `setAllowedHeaders`: Se definen los encabezados permitidos en la solicitud CORS.
+
+5. **Configuración del filtro CORS**: Se crea un bean de tipo `FilterRegistrationBean<CorsFilter>` que registra el filtro CORS con la configuración CORS definida en el método `corsConfigurationSource()`. Este filtro se asegura de que las solicitudes CORS sean manejadas correctamente.
+
+6. **Orden del filtro CORS**: Se establece el orden del filtro CORS con el método `setOrder()`, para asegurar que este filtro se aplique antes que otros filtros de seguridad.
+
+En resumen, esta clase `ResourceServerConfig` configura la seguridad para proteger los recursos/APIs en la aplicación utilizando Spring Security. Se permite el acceso público al endpoint `/api/clientes` con el método GET, y para otros endpoints y métodos HTTP, se requiere autenticación. Además, se habilita y configura CORS para permitir solicitudes desde `http://localhost:4200`, que es el origen de la aplicación del cliente.
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```java
+
+@Configuration
+@EnableResourceServer
+public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
+
+    @Override
+	public void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests().antMatchers(HttpMethod.GET,"/api/clientes").permitAll()
+		.anyRequest().authenticated()
+		.and().cors().configurationSource(corsConfigurationSource());
+			
+		
+	}
+
+	@Bean
+	public CorsConfigurationSource corsConfigurationSource() {
+		CorsConfiguration config = new CorsConfiguration();
+		config.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
+		config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+		config.setAllowCredentials(true);
+		config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));		
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		source.registerCorsConfiguration("/**", config);
+		return source;
+	}
+	
+	
+	@Bean
+	public FilterRegistrationBean<CorsFilter> corsFilter(){
+		FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<CorsFilter>(new CorsFilter(corsConfigurationSource()));
+		bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
+		return bean;
+	}
+	
+    
+}
+
+
+```
+
+</p>
+</details>
+
+<br>
