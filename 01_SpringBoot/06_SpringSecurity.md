@@ -752,7 +752,7 @@ Esto nos va permitir usar BCryptPasswordEncoder para genera password ecriptados 
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/ab0195b4-22a3-46c4-90e0-1b7fe2b00845)
 
-Se actuliza los password de los usuarios que se definieron en el import.sql
+Se actualiza los password de los usuarios que se definieron en el import.sql
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/367d3dfc-ea75-4b13-bf4e-ff3442f2fd90)
 
