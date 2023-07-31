@@ -351,3 +351,11 @@ El código que proporcionaste es una implementación del método `loadUserByUser
 En resumen, este método carga los detalles del usuario durante el proceso de autenticación y devuelve un objeto `User` que representa al usuario autenticado, incluyendo sus roles que se utilizarán para controlar el acceso en la aplicación protegida por Spring Security.  `usuarioRepository` representa un componente de acceso a datos (un repositorio) que se utiliza para interactuar con la base de datos y obtener la información del usuario.
 
 <br>
+
+## 6. Oauth
+
+<br>
+
+### 6.1 InfoAdicionalToken
+
+
