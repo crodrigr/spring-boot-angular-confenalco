@@ -633,7 +633,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 ### 6.5 AuthenticationManager
 
-![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/04ebf170-cb73-4b36-9296-16384df2d25a)
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/33a1a375-6780-4caf-ad12-11b478393d90)
 
 
 <details><summary>Mostrar código</summary>
@@ -682,7 +682,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.inMemory().withClient("angularapp")
+		clients.inMemory().withClient("frontendapp")
 		.secret(passwordEncoder.encode("12345"))
 		.scopes("read", "write")
 		.authorizedGrantTypes("password", "refresh_token")
