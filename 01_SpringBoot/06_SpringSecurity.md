@@ -102,6 +102,7 @@ Detalle del proyeceso de autenticación. Lo que ocurre detras de escena.
 <p>   
     
 ```xml
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -109,7 +110,7 @@ Detalle del proyeceso de autenticación. Lo que ocurre detras de escena.
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.4</version>
+		<version>2.5.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.demo</groupId>
@@ -141,11 +142,10 @@ Detalle del proyeceso de autenticación. Lo que ocurre detras de escena.
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>	      
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    </dependency>
-
+       <dependency>
+        <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+       </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
@@ -153,7 +153,7 @@ Detalle del proyeceso de autenticación. Lo que ocurre detras de escena.
 		<dependency>
 			<groupId>org.springframework.security.oauth</groupId>
 			<artifactId>spring-security-oauth2</artifactId>
-			<version>2.5.2.RELEASE</version>
+			<version>2.3.4.RELEASE</version>
 		</dependency>
 			<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -163,6 +163,10 @@ Detalle del proyeceso de autenticación. Lo que ocurre detras de escena.
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
 		</dependency>		
 		
 	</dependencies>
