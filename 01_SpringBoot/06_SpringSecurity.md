@@ -359,3 +359,68 @@ En resumen, este método carga los detalles del usuario durante el proceso de au
 ### 6.1 InfoAdicionalToken
 
 
+Este código muestra una clase llamada `InfoAdicionalToken`, que implementa la interfaz `TokenEnhancer` en una aplicación Spring Boot. La función de esta clase es mejorar el token de acceso OAuth2 al agregar información adicional al mismo antes de ser devuelto al cliente que lo solicitó. Aquí está una explicación detallada de cada parte del código:
+
+1. **Anotación `@Component`**: Esta anotación indica que la clase es un componente de Spring y será escaneada y administrada por el contenedor de Spring.
+
+2. **Inyección de Dependencia**: La clase utiliza la anotación `@Autowired` para inyectar una instancia de `IUsuarioService`, que representa un servicio que interactúa con la entidad `Usuario`. Esto permite que la clase acceda al servicio `usuarioService` para obtener información adicional sobre el usuario que está solicitando el token.
+
+3. **Método `enhance`**: Esta es la implementación del método `enhance` de la interfaz `TokenEnhancer`. Este método se llama durante el proceso de emisión de tokens de acceso OAuth2 para mejorar el token antes de que se devuelva al cliente.
+
+4. **Obtención de información adicional sobre el usuario**: Dentro del método `enhance`, se utiliza el objeto `authentication` para obtener el nombre de usuario (el identificador del usuario) que está solicitando el token. Luego, se utiliza el servicio `usuarioService` para buscar al usuario en la base de datos utilizando el nombre de usuario.
+
+5. **Creación de información adicional**: Se crea un mapa llamado `info`, que contiene información adicional que se agregará al token. En este caso, se agrega un mensaje de saludo personalizado con el nombre de usuario, así como el nombre, apellido y email del usuario que se obtuvo de la base de datos.
+
+6. **Establecimiento de información adicional en el token**: La información adicional creada en el mapa `info` se establece en el token de acceso OAuth2 utilizando el método `setAdditionalInformation` de `DefaultOAuth2AccessToken`, que es una implementación de `OAuth2AccessToken`.
+
+7. **Retorno del token mejorado**: Finalmente, el token de acceso OAuth2 con la información adicional se devuelve al cliente que lo solicitó.
+
+En resumen, esta clase `InfoAdicionalToken` actúa como un mejorador de tokens de acceso OAuth2 al agregar información adicional al token antes de que sea devuelto al cliente. Esto permite personalizar el token con información específica del usuario, lo que puede ser útil para ciertos casos de uso en la aplicación.
+
+
+```java
+
+package com.demo.demo.auth;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
+import org.springframework.security.oauth2.common.OAuth2AccessToken;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.security.oauth2.provider.token.TokenEnhancer;
+import org.springframework.stereotype.Component;
+
+import com.demo.demo.repository.entities.Usuario;
+import com.demo.demo.services.UsuarioService;
+
+@Component
+public class InfoAdicionalToken implements TokenEnhancer {
+	
+	@Autowired
+	private UsuarioService usuarioService;
+
+	@Override
+	public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
+		
+		Usuario usuario=usuarioService.findByUsername(authentication.getName());
+		
+		Map<String,Object> info = new HashMap<>();
+		info.put("info_adicional", "Hola que tal! : ".concat(authentication.getName()));
+		info.put("nombre",usuario.getNombre());
+		info.put("apellido",usuario.getApellido());
+		info.put("email",usuario.getEmail());
+
+		((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(info);		
+			
+		return accessToken;
+	}
+	
+	
+	
+
+}
+
+
+```
