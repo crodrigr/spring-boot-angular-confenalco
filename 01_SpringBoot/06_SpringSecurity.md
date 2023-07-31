@@ -433,3 +433,31 @@ public class InfoAdicionalToken implements TokenEnhancer {
 </p>
 </details>
 
+<br>
+
+### 6.1 InfoAdicionalToken
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/6124aec3-4d43-4c56-a02c-26e7c683ab08)
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```java
+
+package com.demo.demo.auth;
+
+public class JwtConfig {
+
+    public static final String LLAVE_SECRETA="alguna.clave.secreta.322929292";
+    
+}
+
+
+
+```
+
+</p>
+</details>
+
+
