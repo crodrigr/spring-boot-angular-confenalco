@@ -631,5 +631,121 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 <br>
 
-### 6.4 
+### 6.4 AuthenticationManager
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/04ebf170-cb73-4b36-9296-16384df2d25a)
+
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```java
+package com.demo.demo.auth;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
+
+@Configuration
+@EnableAuthorizationServer
+public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter{
+
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+	
+	@Autowired
+	@Qualifier("authenticationManager")
+	private AuthenticationManager authenticationManager;
+	
+	@Autowired
+	private InfoAdicionalToken infoAdicionalToken;
+
+	@Override
+	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+		security.tokenKeyAccess("permitAll()")
+		.checkTokenAccess("isAuthenticated()");
+	}
+
+	@Override
+	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+		clients.inMemory().withClient("angularapp")
+		.secret(passwordEncoder.encode("12345"))
+		.scopes("read", "write")
+		.authorizedGrantTypes("password", "refresh_token")
+		.accessTokenValiditySeconds(3600)
+		.refreshTokenValiditySeconds(3600);
+	}
+
+	@Override
+	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+		TokenEnhancerChain tokenEnhancerChain = new TokenEnhancerChain();
+		tokenEnhancerChain.setTokenEnhancers(Arrays.asList(infoAdicionalToken, accessTokenConverter()));
+		
+		endpoints.authenticationManager(authenticationManager)
+		.tokenStore(tokenStore())
+		.accessTokenConverter(accessTokenConverter())
+		.tokenEnhancer(tokenEnhancerChain);
+	}
+
+	@Bean
+	public JwtTokenStore tokenStore() {
+		return new JwtTokenStore(accessTokenConverter());
+	}
+
+	@Bean
+	public JwtAccessTokenConverter accessTokenConverter() {
+		JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
+		jwtAccessTokenConverter.setSigningKey(JwtConfig.LLAVE_SECRETA);		
+		return jwtAccessTokenConverter;
+	}
+	
+
+}
+
+
+```
+
+</p>
+</details>
+
+Este código muestra una configuración de un servidor de autorización (Authorization Server) en una aplicación Spring Boot con Spring Security y OAuth2 habilitado. El servidor de autorización es responsable de emitir tokens de acceso para que los clientes puedan acceder a los recursos protegidos de la aplicación. A continuación, se explica cada parte del código:
+
+1. **Anotaciones `@Configuration` y `@EnableAuthorizationServer`**: La clase está anotada con `@Configuration`, lo que indica que es una clase de configuración de Spring, y con `@EnableAuthorizationServer`, lo que habilita la funcionalidad de servidor de autorización en la aplicación.
+
+2. **Inyección de Dependencia**: Se inyecta una instancia de `BCryptPasswordEncoder`, que se utilizará para codificar la contraseña del cliente que solicita el token.
+
+3. **Inyección de Dependencia del `AuthenticationManager`**: Se inyecta una instancia de `AuthenticationManager`, que se utilizará para autenticar las solicitudes de los clientes que solicitan el token.
+
+4. **Inyección de Dependencia de `InfoAdicionalToken`**: Se inyecta una instancia de `InfoAdicionalToken`, que es una clase personalizada que extiende `TokenEnhancer` y se utiliza para agregar información adicional al token de acceso.
+
+5. **Método `configure(AuthorizationServerSecurityConfigurer security)`**: Se sobrescribe este método para configurar la seguridad del servidor de autorización. En este caso, se configura para permitir el acceso al endpoint de obtención del token (`/oauth/token`) sin autenticación (`permitAll()`), pero se requiere autenticación para verificar la validez de un token (`/oauth/check_token`).
+
+6. **Método `configure(ClientDetailsServiceConfigurer clients)`**: Se sobrescribe este método para configurar los clientes autorizados que pueden solicitar tokens de acceso. En este caso, se configura un cliente en memoria llamado "angularapp" con una contraseña codificada con `BCryptPasswordEncoder`, y se especifican los alcances (`scopes`) y los tipos de concesión autorizados para ese cliente (`password` y `refresh_token`).
+
+7. **Método `configure(AuthorizationServerEndpointsConfigurer endpoints)`**: Se sobrescribe este método para configurar los puntos finales del servidor de autorización. Aquí, se configura el `AuthenticationManager`, el `TokenStore`, el `AccessTokenConverter` y el `TokenEnhancer`. Se utiliza un `JwtTokenStore` con el `AccessTokenConverter` para almacenar los tokens de acceso como JWT (JSON Web Tokens).
+
+8. **Bean `JwtTokenStore`**: Se define un bean llamado `tokenStore` que devuelve una instancia de `JwtTokenStore`, que es un `TokenStore` que almacena los tokens de acceso como JWT.
+
+9. **Bean `JwtAccessTokenConverter`**: Se define un bean llamado `accessTokenConverter` que devuelve una instancia de `JwtAccessTokenConverter`, que es un `AccessTokenConverter` que se utiliza para convertir los tokens de acceso entre formato JWT y formato normal.
+
+En resumen, esta clase `AuthorizationServerConfig` configura un servidor de autorización OAuth2 con Spring Security. Se especifica cómo se emiten los tokens de acceso, qué clientes están autorizados para solicitar tokens y cómo se manejan los puntos finales para autenticar las solicitudes y emitir los tokens. También se utiliza JWT para almacenar los tokens de acceso y se agrega información adicional al token utilizando la clase `InfoAdicionalToken`.
+
+<br>
+
+
+
 
