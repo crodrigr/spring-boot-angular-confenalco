@@ -377,6 +377,11 @@ Este código muestra una clase llamada `InfoAdicionalToken`, que implementa la i
 
 En resumen, esta clase `InfoAdicionalToken` actúa como un mejorador de tokens de acceso OAuth2 al agregar información adicional al token antes de que sea devuelto al cliente. Esto permite personalizar el token con información específica del usuario, lo que puede ser útil para ciertos casos de uso en la aplicación.
 
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/55223daf-0a22-4ff7-bf2d-853aa0d95b0b)
+
+<details><summary>Mostrar código</summary>
+
+<p>  
 
 ```java
 
@@ -424,3 +429,7 @@ public class InfoAdicionalToken implements TokenEnhancer {
 
 
 ```
+
+</p>
+</details>
+
