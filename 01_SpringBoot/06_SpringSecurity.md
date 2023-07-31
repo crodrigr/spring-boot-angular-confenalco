@@ -543,3 +543,93 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 </details>
 
 <br>
+
+### 6.3 SpringSecurityConfig
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/7eac8ddb-f1b8-4082-b515-cbf7981cf550)
+
+
+Este código muestra una clase de configuración de seguridad para una aplicación Spring Boot con Spring Security habilitado para proteger los métodos (global method security). A continuación, se explica cada parte del código:
+
+1. **Anotación `@EnableGlobalMethodSecurity(securedEnabled=true)`**: Esta anotación habilita la seguridad a nivel de método en la aplicación. Permite el uso de anotaciones como `@Secured`, `@PreAuthorize`, `@PostAuthorize`, etc., para definir los permisos necesarios para acceder a métodos específicos.
+
+2. **Clase de Configuración `SpringSecurityConfig`**: Esta clase es una configuración personalizada de Spring Security que extiende de `WebSecurityConfigurerAdapter`. Con esta clase, puedes personalizar la seguridad de tu aplicación.
+
+3. **Inyección de Dependencia**: Se inyecta una implementación de `UserDetailsService`, que generalmente es proporcionada por el desarrollador para manejar la autenticación y carga de detalles de usuario durante el proceso de inicio de sesión.
+
+4. **Bean `BCryptPasswordEncoder`**: Se define un bean llamado `passwordEncoder` que devuelve una instancia de `BCryptPasswordEncoder`. Esta es una clase proporcionada por Spring Security que se utiliza para codificar contraseñas utilizando el algoritmo BCrypt.
+
+5. **Método `configure(AuthenticationManagerBuilder auth)`**: Se sobrescribe este método para configurar la autenticación. Aquí, se utiliza el `UserDetailsService` inyectado (`usuarioService`) y el bean `BCryptPasswordEncoder` para configurar cómo Spring Security autenticará a los usuarios.
+
+6. **Método `authenticationManager()`**: Se sobrescribe este método para exponer el `AuthenticationManager` como un bean en el contexto de Spring. Esto permite que otros componentes de la aplicación accedan al `AuthenticationManager`, por ejemplo, en el proceso de autenticación de usuarios.
+
+7. **Método `configure(HttpSecurity http)`**: Se sobrescribe este método para configurar la autorización. En este caso, se configura para que todas las solicitudes entrantes requieran autenticación (`authenticated()`) y se deshabilita la protección CSRF (`csrf().disable()`). Además, se establece la política de administración de sesiones como STATELESS, lo que significa que no se mantendrán sesiones en el servidor.
+
+En resumen, esta clase `SpringSecurityConfig` configura la seguridad para proteger la aplicación. Los métodos están protegidos con seguridad a nivel de método habilitada mediante la anotación `@EnableGlobalMethodSecurity`, lo que permite utilizar anotaciones como `@Secured`, `@PreAuthorize`, etc., para definir los permisos necesarios para acceder a métodos específicos. La autenticación se maneja utilizando el `UserDetailsService` y las contraseñas se codifican con el algoritmo BCrypt mediante el bean `BCryptPasswordEncoder`. La configuración general de seguridad para las solicitudes HTTP se define en el método `configure(HttpSecurity http)`.
+
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```java
+
+package com.demo.demo.auth;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+@EnableGlobalMethodSecurity(securedEnabled=true)
+@Configuration
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	private UserDetailsService usuarioService;
+	
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
+	@Override
+	@Autowired
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(this.usuarioService).passwordEncoder(passwordEncoder());
+	}
+
+	@Bean("authenticationManager")
+	@Override
+	protected AuthenticationManager authenticationManager() throws Exception {
+		return super.authenticationManager();
+	}
+	
+	@Override
+	public void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests()
+		.anyRequest().authenticated()
+		.and()
+		.csrf().disable()
+		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+	}
+
+}
+
+
+```
+
+</p>
+</details>
+
+<br>
+
+### 6.4 
+
