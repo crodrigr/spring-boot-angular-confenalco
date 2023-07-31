@@ -544,7 +544,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 <br>
 
-### 6.3 SpringSecurityConfig
+### 6.4 SpringSecurityConfig
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/7eac8ddb-f1b8-4082-b515-cbf7981cf550)
 
@@ -631,7 +631,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 <br>
 
-### 6.4 AuthenticationManager
+### 6.5 AuthenticationManager
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/04ebf170-cb73-4b36-9296-16384df2d25a)
 
@@ -745,6 +745,19 @@ Este código muestra una configuración de un servidor de autorización (Authori
 En resumen, esta clase `AuthorizationServerConfig` configura un servidor de autorización OAuth2 con Spring Security. Se especifica cómo se emiten los tokens de acceso, qué clientes están autorizados para solicitar tokens y cómo se manejan los puntos finales para autenticar las solicitudes y emitir los tokens. También se utiliza JWT para almacenar los tokens de acceso y se agrega información adicional al token utilizando la clase `InfoAdicionalToken`.
 
 <br>
+
+### 6.6 Password encriptados
+
+Esto nos va permitir usar BCryptPasswordEncoder para genera password ecriptados para actulizarlo en la tabla de usuario
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/ab0195b4-22a3-46c4-90e0-1b7fe2b00845)
+
+Se actuliza los password de los usuarios que se definieron en el import.sql
+
+![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/367d3dfc-ea75-4b13-bf4e-ff3442f2fd90)
+
+
+
 
 
 
