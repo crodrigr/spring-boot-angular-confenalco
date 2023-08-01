@@ -1,7 +1,7 @@
 # Curso Spring  Boot y Angular
 
-[Api fuentes](https://github.com/crodrigr/spring-boot-angular-confenalco-code/tree/master)
-[Angular Tutorial](https://www.tutorialesprogramacionya.com/angularya/index.php?inicio=0)
+  - [Api fuentes](https://github.com/crodrigr/spring-boot-angular-confenalco-code/tree/master)
+  - [Angular Tutorial](https://www.tutorialesprogramacionya.com/angularya/index.php?inicio=0)
 
 
 <video src="[LINK](https://www.youtube-nocookie.com/embed/FEa2diI2qgA)" controls="controls" style="max-width: 730px;">
