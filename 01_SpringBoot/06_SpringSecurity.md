@@ -444,7 +444,7 @@ public class InfoAdicionalToken implements TokenEnhancer {
 
 <br>
 
-### 6.2 InfoAdicionalToken
+### 6.2 JwtConfig
 
 ![image](https://github.com/crodrigr/spring-boot-angular-confenalco/assets/31961588/6124aec3-4d43-4c56-a02c-26e7c683ab08)
 
