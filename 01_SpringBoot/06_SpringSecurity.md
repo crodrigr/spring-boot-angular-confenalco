@@ -567,6 +567,53 @@ Este código muestra una clase de configuración de seguridad para una aplicaci�
 
 5. **Método `configure(AuthenticationManagerBuilder auth)`**: Se sobrescribe este método para configurar la autenticación. Aquí, se utiliza el `UserDetailsService` inyectado (`usuarioService`) y el bean `BCryptPasswordEncoder` para configurar cómo Spring Security autenticará a los usuarios.
 
+<details><summary>Más información</summary>
+
+<p>
+
+El método `configure(AuthenticationManagerBuilder auth)` es un método proporcionado por la clase `WebSecurityConfigurerAdapter` de Spring Security. Este método es utilizado para configurar el `AuthenticationManager`, que es responsable de autenticar a los usuarios en la aplicación.
+
+Cuando defines una clase que extiende `WebSecurityConfigurerAdapter`, puedes sobrescribir el método `configure(AuthenticationManagerBuilder auth)` para personalizar cómo se autentican los usuarios. Dentro de este método, puedes configurar el `AuthenticationManager` con diferentes esquemas de autenticación, como autenticación basada en memoria, autenticación con base de datos, autenticación LDAP, autenticación con proveedores externos y muchos más.
+
+A continuación, se muestra un ejemplo de cómo podrías implementar el método `configure(AuthenticationManagerBuilder auth)`:
+
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // Autenticación basada en memoria (para fines de demostración)
+        auth.inMemoryAuthentication()
+            .withUser("user").password("{noop}password").roles("USER")
+            .and()
+            .withUser("admin").password("{noop}password").roles("USER", "ADMIN");
+
+        // Autenticación basada en una base de datos (usando un servicio de UserDetailsService)
+        auth.userDetailsService(userDetailsService);
+
+        // Otras configuraciones de autenticación también pueden ir aquí, como LDAP, OAuth, etc.
+    }
+
+    // Otras configuraciones de seguridad de Spring Security pueden ir aquí...
+}
+```
+
+En este ejemplo, estamos configurando el `AuthenticationManager` para la autenticación en memoria con dos usuarios: "user" con el rol "USER" y "admin" con los roles "USER" y "ADMIN". También se muestra cómo se puede configurar la autenticación utilizando un servicio de `UserDetailsService`, que es una interfaz proporcionada por Spring Security para cargar detalles de usuario desde una fuente de datos personalizada, como una base de datos.
+
+Es importante tener en cuenta que el formato del hash de contraseña utilizado aquí (`{noop}password`) es para fines de demostración y no es seguro para un entorno de producción. En un entorno real, deberías utilizar un algoritmo de hashing seguro, como BCrypt, para almacenar las contraseñas de los usuarios de manera segura.
+
+En resumen, el método `configure(AuthenticationManagerBuilder auth)` en una clase que extiende `WebSecurityConfigurerAdapter` es utilizado para configurar el `AuthenticationManager`, lo que permite personalizar cómo los usuarios son autenticados en tu aplicación Spring Security.
+
+</p>
+</details>
+
+   
+
 6. **Método `authenticationManager()`**: Se sobrescribe este método para exponer el `AuthenticationManager` como un bean en el contexto de Spring. Esto permite que otros componentes de la aplicación accedan al `AuthenticationManager`, por ejemplo, en el proceso de autenticación de usuarios.
 
 7. **Método `configure(HttpSecurity http)`**: Se sobrescribe este método para configurar la autorización. En este caso, se configura para que todas las solicitudes entrantes requieran autenticación (`authenticated()`) y se deshabilita la protección CSRF (`csrf().disable()`). Además, se establece la política de administración de sesiones como STATELESS, lo que significa que no se mantendrán sesiones en el servidor.
