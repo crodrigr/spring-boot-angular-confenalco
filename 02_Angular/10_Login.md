@@ -45,7 +45,26 @@ export class Usuario {
 
 ## 4. Importar las librerias necesarias del auth.services.ts
 
+<br>
+
 ![image](https://user-images.githubusercontent.com/31961588/171074065-c95e5f97-1a36-4318-8f5a-213f170a0f81.png)
+
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```TypeScript
+
+import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Usuario } from './usuario';
+import { environment } from 'src/environments/environment';
+
+```
+
+</p>
+</details>
 
 <br>
 <br>
