@@ -174,7 +174,70 @@ obtenerDatosToken(accessToken: string): any {
 
 ## 8. Se crean los métodos guardarToken, isAuthenticated, hasRole, logout
 
+<br>
+
 ![image](https://user-images.githubusercontent.com/31961588/171075920-9e50511b-8176-4a6b-a4da-43442de0882b.png)
+
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```TypeScript
+ public get usuario(): Usuario {
+    if (this._usuario != null) {
+      return this._usuario;
+    } else if (this._usuario == null && sessionStorage.getItem('usuario') != null) {
+      this._usuario = JSON.parse(sessionStorage.getItem('usuario')) as Usuario;
+      return this._usuario;
+    }
+    return new Usuario();
+  }
+  
+  public get token(): string {
+    if (this._token != null) {
+      return this._token;
+    } else if (this._token == null && sessionStorage.getItem('token') != null) {
+      this._token = sessionStorage.getItem('token');
+      return this._token;
+    }
+    return null;
+  }
+
+
+  guardarToken(accessToken: string): void {
+    this._token = accessToken;
+    sessionStorage.setItem('token', accessToken);
+  }
+
+  isAuthenticated(): boolean {
+    let payload = this.obtenerDatosToken(this.token);
+    if (payload != null && payload.user_name && payload.user_name.length > 0) {
+      return true;
+    }
+    return false;
+  }
+
+  hasRole(role: string): boolean {
+    if (this.usuario.roles.includes(role)) {
+      return true;
+    }
+    return false;
+  }
+  
+  logout(): void {
+    this._token = null;
+    this._usuario = null;
+    sessionStorage.clear();
+    
+  }
+
+
+
+```
+
+</p>
+</details>
 
 <br>
 <br>
