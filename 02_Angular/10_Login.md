@@ -1,12 +1,37 @@
 # Modulo de autenticación de usuarion en el front.
 
+
+<br>
+<br>
+
 ## 1. Se crea el directorio usuario
+
+<br>
 
 ![image](https://user-images.githubusercontent.com/31961588/171073600-d37ab714-88fd-4f11-86fd-c23e797511f0.png)
 
 ## 2. Se crea la clase usuario.ts
 
 ![image](https://user-images.githubusercontent.com/31961588/171073721-9c4c8361-8436-4bc2-819e-ed717dea6f0a.png)
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```TypeScript
+export class Usuario {
+    id: number;
+    username: string;
+    password: string;
+    nombre: string;
+    apellido: string;
+    email: string;
+    roles: string[]=[];    
+  }
+```
+
+</p>
+</details>
 
 ## 3. Se crea el servicio auth.service.ts
 
