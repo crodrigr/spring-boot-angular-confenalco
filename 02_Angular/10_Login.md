@@ -93,6 +93,8 @@ import { environment } from 'src/environments/environment';
 
 ## 6. Inyección de dependencia del HttpCliente y se crea el método login
 
+<br>
+
 ![image](https://user-images.githubusercontent.com/31961588/171074366-132d025d-13fc-47b6-9e8e-1a3d7fbf0809.png)
 
 <details><summary>Mostrar código</summary>
@@ -132,7 +134,40 @@ constructor(private http: HttpClient) {
 
 ## 7. Se crea los métodos obtenerDatos y guardarUsuario
 
+<br>
+
 ![image](https://user-images.githubusercontent.com/31961588/171074669-17b0f65c-b461-4f01-acc1-acac575f3b94.png)
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```TypeScript
+obtenerDatosToken(accessToken: string): any {
+    if (accessToken != null) {
+      return JSON.parse(atob(accessToken.split(".")[1]));
+    }
+    return null;
+  }
+
+
+  guardarUsuario(accessToken: string): void {
+    let payload = this.obtenerDatosToken(accessToken);
+    this._usuario = new Usuario();
+    this._usuario.nombre = payload.nombre;
+    this._usuario.apellido = payload.apellido;
+    this._usuario.email = payload.email;
+    this._usuario.username = payload.user_name;
+    this._usuario.roles = payload.authorities;
+    sessionStorage.setItem('usuario', JSON.stringify(this._usuario));
+  }
+
+
+
+```
+
+</p>
+</details>
 
 <br>
 <br>
