@@ -183,7 +183,31 @@ obtenerDatosToken(accessToken: string): any {
 <br>
 <br>
 
-## 8. Se crean los métodos guardarToken, isAuthenticated, hasRole, logout
+
+
+## 8. Se crean los metodos getUsuario y getTokent
+
+<br>
+<br>
+
+![image](https://user-images.githubusercontent.com/31961588/171076194-f8d35322-7256-420f-9789-434487f25df5.png)
+
+**Código usurio.ts**
+```TypeScript
+export class Usuario {
+    id: number;
+    username: string;
+    password: string;
+    nombre: string;
+    apellido: string;
+    email: string;
+    roles: string[]=[];
+
+    
+  }
+```
+
+## 9. Se crean los métodos guardarToken, isAuthenticated, hasRole, logout
 
 <br>
 <br>
@@ -254,30 +278,17 @@ obtenerDatosToken(accessToken: string): any {
 <br>
 <br>
 
-## 9. Se crean los metodos getUsuario y getTokent
+## 10 Codigo
 
 <br>
 <br>
 
-![image](https://user-images.githubusercontent.com/31961588/171076194-f8d35322-7256-420f-9789-434487f25df5.png)
+<details><summary>Mostrar código</summary>
 
-**Código usurio.ts**
-```TypeScript
-export class Usuario {
-    id: number;
-    username: string;
-    password: string;
-    nombre: string;
-    apellido: string;
-    email: string;
-    roles: string[]=[];
-
+<p>   
     
-  }
-```
-
-**Código auth.service.ts**
 ```TypeScript
+
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -292,29 +303,7 @@ export class AuthService {
   private _usuario: Usuario;
   private _token: string
 
-
   constructor(private http: HttpClient) { 
-
-  }
-
-  public get usuario(): Usuario {
-    if (this._usuario != null) {
-      return this._usuario;
-    } else if (this._usuario == null && sessionStorage.getItem('usuario') != null) {
-      this._usuario = JSON.parse(sessionStorage.getItem('usuario')) as Usuario;
-      return this._usuario;
-    }
-    return new Usuario();
-  }
-  
-  public get token(): string {
-    if (this._token != null) {
-      return this._token;
-    } else if (this._token == null && sessionStorage.getItem('token') != null) {
-      this._token = sessionStorage.getItem('token');
-      return this._token;
-    }
-    return null;
   }
 
   login(usuario: Usuario): Observable<any> {
@@ -354,9 +343,62 @@ export class AuthService {
     sessionStorage.setItem('usuario', JSON.stringify(this._usuario));
   }
 
-}
+  public get usuario(): Usuario {
+    if (this._usuario != null) {
+      return this._usuario;
+    } else if (this._usuario == null && sessionStorage.getItem('usuario') != null) {
+      this._usuario = JSON.parse(sessionStorage.getItem('usuario')) as Usuario;
+      return this._usuario;
+    }
+    return new Usuario();
+  }
+  
+  public get token(): string {
+    if (this._token != null) {
+      return this._token;
+    } else if (this._token == null && sessionStorage.getItem('token') != null) {
+      this._token = sessionStorage.getItem('token');
+      return this._token;
+    }
+    return null;
+  }
 
+
+  guardarToken(accessToken: string): void {
+    this._token = accessToken;
+    sessionStorage.setItem('token', accessToken);
+  }
+
+  isAuthenticated(): boolean {
+    let payload = this.obtenerDatosToken(this.token);
+    if (payload != null && payload.user_name && payload.user_name.length > 0) {
+      return true;
+    }
+    return false;
+  }
+
+  hasRole(role: string): boolean {
+    if (this.usuario.roles.includes(role)) {
+      return true;
+    }
+    return false;
+  }
+  
+  logout(): void {
+    this._token = null;
+    this._usuario = null;
+    sessionStorage.clear();
+    
+  }
+
+
+
+
+
+}
 
 
 ```
 
+</p>
+</details>
