@@ -95,6 +95,38 @@ import { environment } from 'src/environments/environment';
 
 ![image](https://user-images.githubusercontent.com/31961588/171074366-132d025d-13fc-47b6-9e8e-1a3d7fbf0809.png)
 
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```TypeScript
+
+constructor(private http: HttpClient) { 
+  }
+
+ login(usuario: Usuario): Observable<any> {
+    const urlEndpoint = environment.apiUrl+'/oauth/token';
+
+    const credenciales = btoa('angularapp' + ':' + '12345');
+
+    const httpHeaders = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Basic ' + credenciales
+    });
+
+    let params = new URLSearchParams();
+    params.set('grant_type', 'password');
+    params.set('username', usuario.username);
+    params.set('password', usuario.password);
+    console.log(params.toString());
+    return this.http.post<any>(urlEndpoint, params.toString(), { headers: httpHeaders });
+  }
+
+```
+
+</p>
+</details>
+
 <br>
 <br>
 
