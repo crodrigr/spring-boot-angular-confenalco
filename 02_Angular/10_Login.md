@@ -71,7 +71,22 @@ import { environment } from 'src/environments/environment';
 
 ## 5. Definimos las siguientes variables
 
+<br>
+
 ![image](https://user-images.githubusercontent.com/31961588/171074207-2271099a-57bc-4073-8d13-1d4d7f7c7f15.png)
+
+
+<details><summary>Mostrar código</summary>
+
+<p>   
+    
+```TypeScript
+  private _usuario: Usuario;
+  private _token: string
+```
+
+</p>
+</details>
 
 <br>
 <br>
